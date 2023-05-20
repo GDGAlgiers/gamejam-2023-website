@@ -6,15 +6,14 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      PTChaser: ["PT-chaser", "sans-serif"],
+      "PTGilroy-light": ["PT-gilroy-light", "sans-serif"],
+      "PTGilroy-Bold": ["PT-gilroy-bold", "sans-serif"],
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      fontFamily: {
-        PTChaser: ['PT-chaser', 'sans-serif'],
-      },
+      "gameJam-blue": "#4EFEF6",
+      "gameJam-yellow": "#FCBC05",
     },
     screens: {
       sm: "560px",

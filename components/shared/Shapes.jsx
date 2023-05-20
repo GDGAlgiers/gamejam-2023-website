@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Shapes = () => {
   return (
-    <div>
+    <div className="hidden md:flex">
       {/* Stars */}
       <div className="absolute top-6 right-4 z-10">
         <Image src="/shapes/star.png" alt="shape" height={69} width={69} />

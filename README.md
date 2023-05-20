@@ -1,38 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GDG Algiers GameJam 2023 Website
 
-## Getting Started
+Hey Developer, thanks for taking the chance to be part of this project.
 
-First, run the development server:
+### Contribution guidelines to be FOLLOWED
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- We're using **yarn** as package manager instead of *npm*. **DO NOT use npm**
+- **All necessary** tailwind configurations(colors, screen breakpoints, fonts) are specified in `./tailwind.config.cjs`. **DO NOT change this file without notifying the project manager**.
+- Issues are created for each section, assign to your self the desired section to work on.
+- **First thing to do**
+  - Clone the project
+  - Install the dependencies: *run the command* `yarn`
+  - >If you don't have yarn, make sure to install it globally using the command: npm install -g  yarn
+  - Assign your-self the issue you want to work in
+- **Follow the folder structure** (a folder tree is created for each section).
+- Before start working on your section, **make sure** to create a branch following the convention: `feature/[section]/[your_name]`.e.g: `feature/hero/abdessamed`
+- **DO NOT** change any thing related to the Layout(layout structure, section title component ...etc).
+- Each section's images must be put inside its appropriate folder in the `public` folder. Ex: for hero section images: `/public/heroImages/[image-name]`
+- **DO NOT FORGET** to implement the 3 different screen sizes
+  - `sm` breakpoint for small screens
+  - `lg` breakpoint for large screens (1280px)
+  - `2xl`breakpoint for extra large screens(1920px)
+- All necessary packages are installed(swiperjs).
+- Consider providing good commit messages when pushing your code. **Pull requests containing random commit messages will be closed immediately**.

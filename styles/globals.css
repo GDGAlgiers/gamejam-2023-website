@@ -7,10 +7,9 @@
       display: none;
     }
 
-    
     .no-scrollbar {
-      -ms-overflow-style: none; 
-      scrollbar-width: none; 
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
 }
@@ -27,6 +26,18 @@ body {
   font-family: PT-chaser;
   src: url("../public/fonts/CHASER.ttf");
 }
+@font-face {
+  font-family: PT-gilroy-light;
+  src: url("../public/fonts/Gilroy-Light.otf");
+}
+@font-face {
+  font-family: PT-gilroy-bold;
+  src: url("../public/fonts/Gilroy-ExtraBold.otf");
+}
 .container {
   @apply w-11/12 mx-auto lg:w-[86%];
+}
+
+.bg-text {
+  @apply text-transparent bg-clip-text;
 }
