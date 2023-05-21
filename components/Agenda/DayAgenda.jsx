@@ -6,7 +6,7 @@ return(
         {agenda.map((activity) => (
             <div key={activity.id} className="flex gap-4 items-center">
                 <div className="w-[8px] h-[8px] z-20 bg-white rounded-full"></div>
-                <p className="text-[15px] text-white font-semiBold">{activity.startTime}-{activity.endTime} : <span className="font-[300] text-[13px] text-white ">{activity.text}</span></p>
+                <p className="text-[15px] 2xl:text-2xl text-white font-semiBold">{activity.startTime}-{activity.endTime} : <span className="font-[300] text-[13px] text-white ">{activity.text}</span></p>
             </div>
         ))}
        </div>
