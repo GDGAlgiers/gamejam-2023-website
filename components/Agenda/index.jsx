@@ -3,10 +3,10 @@ import SectionTitle from "../shared/SectionTitle";
 import Day from "./Day";
 import DayAgenda from "./DayAgenda";
 import Image from "next/image";
-import LeftShape from "../../public/Agenda/images/Vector-2.Png"
-import BottomShape from "../../public/Agenda/images/Vector.Png"
-import TopShape from "../../public/Agenda/images/VectorTop.Png"
-import BottomShape2 from "../../public/Agenda/images/Vector2.Png"
+import TopShape from "../../public/Agenda/images/AgendaShapeTop.png"
+import BottomShape from "../../public/Agenda/images/AgendaShapeBottom.png"
+import LeftShape from "../../public/Agenda/images/AgendaShapeLeft.png"
+import RightShape from "../../public/Agenda/images/AgendaShapeRight.png"
 const Agenda = () => {
     const [selectedDay, setSelectedDay] = useState("01");
     const StupidAgenda={
@@ -78,26 +78,31 @@ const Agenda = () => {
                 )}
                </div>
                <div className="hidden lg:block 2xl:hidden">
-                <div className="absolute top-[11rem] left-[8rem]">
-                    <Image src={LeftShape.src} alt="Image description" width={80} height={80}></Image>
+                <div className="absolute top-[25%] left-[14%]">
+                    <Image src={LeftShape.src} alt="Image description" width={110} height={200}></Image>
                 </div>
-                <div className="absolute top-[19rem] left-[12.9rem]">
-                    <Image src={LeftShape.src} alt="Image description" width={80} height={80}></Image>
+                <div className="absolute bottom-[25%] right-[26%]">
+                    <Image src={BottomShape.src} alt="Image description" width={375} height={200}></Image>
                 </div>
-                <div className="absolute bottom-[9.1rem] right-[21.7rem]">
-                    <Image src={BottomShape.src} alt="Image description" width={190} height={190}></Image>
+                <div className="absolute top-[15%] right-[10%]">
+                    <Image src={RightShape.src} alt="Image description" width={100} height={100}></Image>
                 </div>
-                <div className="absolute bottom-[9em] right-[12rem]">
-                    <Image src={BottomShape2.src} alt="Image description" width={190} height={190}></Image>
+                <div className="absolute top-[5%] left-[24%]">
+                    <Image src={TopShape.src} alt="Image description" width={400} height={200}></Image>
                 </div>
-                <div className="absolute top-[5rem] right-[5.4rem]">
-                    <Image src={LeftShape.src} alt="Image description" width={120} height={120}></Image>
+               </div>
+               <div className="hidden 2xl:block">
+                <div className="absolute top-[28%] left-[13%]">
+                    <Image src={LeftShape.src} alt="Image description" width={150} height={300}></Image>
                 </div>
-                <div className="absolute top-[1.7rem] left-[21rem]">
-                    <Image src={TopShape.src} alt="Image description" width={200} height={200}></Image>
+                <div className="absolute bottom-[14%] right-[28%]">
+                    <Image src={BottomShape.src} alt="Image description" width={600} height={200}></Image>
                 </div>
-                <div className="absolute top-[4rem] left-[11.2rem]">
-                    <Image src={TopShape.src} alt="Image description" width={180} height={180}></Image>
+                <div className="absolute top-[22%] right-[13%]">
+                    <Image src={RightShape.src} alt="Image description" width={120} height={100}></Image>
+                </div>
+                <div className="absolute top-[2%] left-[24%]">
+                    <Image src={TopShape.src} alt="Image description" width={600} height={200}></Image>
                 </div>
                </div>
                 <DayAgenda agenda={StupidAgenda[selectedDay]}></DayAgenda>
