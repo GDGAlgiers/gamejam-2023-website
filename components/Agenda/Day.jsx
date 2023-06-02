@@ -90,7 +90,7 @@ const Day=({dayString,position,updateSelectedDay})=>{
       };
     return (
             <>
-            <div className="absolute hidden font-PTChaser lg:flex  2xl:hidden justify-center items-center rounded-full  " style={{width:Propreties.size, height: Propreties.size, zIndex: 1, ...(Propreties.positionTop !== undefined
+            <div className="absolute hidden font-PTGilroy-Bold lg:flex  2xl:hidden justify-center items-center rounded-full  " style={{width:Propreties.size, height: Propreties.size, zIndex: 1, ...(Propreties.positionTop !== undefined
     ? { top: `${Propreties.positionTop}` }
     : { bottom: `${Propreties.positionBottom}` }),
   ...(Propreties.positionLeft !== undefined
@@ -99,11 +99,11 @@ const Day=({dayString,position,updateSelectedDay})=>{
         <div className="absolute" > <img alt="border-bg" src={ BorderBG.src}></img></div>
                 <div className={`flex justify-between items-center flex-col p-4 rounded-full `} style={{width:Propreties.size, height: Propreties.size}}>
                     <h4 className="text-center text-white font-[300]" style={{fontSize:`${Propreties.text1}`}}>Day</h4>
-                    <p className={`text-center  font-bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2}`}}>{dayString}</p>
+                    <p className={`text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2}`}}>{dayString}</p>
                 </div>
             </div>
             
-            <div className="absolute font-PTChaser hidden 2xl:flex justify-center items-center rounded-full " style={{width:Propreties.sizeBigScreen, height: Propreties.sizeBigScreen, ...(Propreties.positionTopBig !== undefined
+            <div className="absolute font-PTGilroy-Bold hidden 2xl:flex justify-center items-center rounded-full " style={{width:Propreties.sizeBigScreen, height: Propreties.sizeBigScreen, ...(Propreties.positionTopBig !== undefined
                 ? { top: `${Propreties.positionTopBig}` }
                 : { bottom: `${Propreties.positionBottomBig}` }),
             ...(Propreties.positionLeftBig !== undefined
@@ -112,17 +112,17 @@ const Day=({dayString,position,updateSelectedDay})=>{
                     <div className="absolute" > <img alt="border-bg" src={ BorderBGBig.src} ></img></div>
                 <div className={`flex justify-between items-center flex-col p-8 rounded-full`} style={{width:Propreties.sizeBigScreen, height: Propreties.sizeBigScreen}}>
                     <h4 className="text-center text-white font-[300]" style={{fontSize:`${Propreties.text1BigScreen}`}}>Day</h4>
-                    <p className={`text-center  font-bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2BigScreen}`}}>{dayString}</p>
+                    <p className={`text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2BigScreen}`}}>{dayString}</p>
                 </div>
             </div>
-           <div className="lg:hidden font-PTChaser self-end" style={{order:Propreties.order}}>
+           <div className="lg:hidden font-PTGilroy-Bold self-end" style={{order:Propreties.order}}>
            <div onClick={handleClick} className={`flex m-2 lg:hidden justify-center items-center rounded-full `} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
            <div className="absolute" ><img
       alt="border-bg" src={Propreties.imgMobileSrc}
     /></div>
-                <div className={`flex  font-PTChaser justify-between items-center flex-col p-${Propreties.padding} rounded-full`} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
-                    <h4 className={`text-lg text-center text-white font-[300]`}>Day</h4>
-                    <p className={`text-sm text-center  font-bold`} style={{color:`#${Propreties.color}`}}>{dayString}</p>
+                <div className={`flex  font-PTGilroy-Bold justify-between items-center flex-col p-${Propreties.padding} rounded-full`} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
+                    <h4 className={`text-lg text-center font-PTGilroy-Bold text-white font-[300]`}>Day</h4>
+                    <p className={`text-sm text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`}}>{dayString}</p>
                 </div>
             </div>
            </div>
