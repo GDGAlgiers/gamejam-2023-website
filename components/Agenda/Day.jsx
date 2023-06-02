@@ -121,7 +121,7 @@ const Day=({dayString,position,updateSelectedDay})=>{
       alt="border-bg" src={Propreties.imgMobileSrc}
     /></div>
                 <div className={`flex  font-PTGilroy-Bold justify-between items-center flex-col p-${Propreties.padding} rounded-full`} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
-                    <h4 className={`text-lg text-center text-white font-[300]`}>Day</h4>
+                    <h4 className={`text-lg text-center font-PTGilroy-Bold text-white font-[300]`}>Day</h4>
                     <p className={`text-sm text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`}}>{dayString}</p>
                 </div>
             </div>

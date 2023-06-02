@@ -4,7 +4,7 @@ const Partners = () => {
   return (
     <section>
       <SectionTitle class="my-8" title="Partners" />
-      <div class="flex flex-col items-center gap-10 items-center justify-center my-10 lg:my-20">
+      <div class="flex flex-col items-center gap-10  justify-center my-10 lg:my-20">
 
         <div class="relative mb-2 lg:mb-0">
           <img src={'/shapes/EllipseColor.png'} alt="EllipseColorMissed" 
