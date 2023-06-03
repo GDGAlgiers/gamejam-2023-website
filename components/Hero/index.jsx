@@ -21,7 +21,7 @@ setRemaining(object)
   }, 1000);
 }, [])
 
-Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.hours} hours, ${Remaining.minutes} minutes, ${Remaining.seconds} seconds`);
+// Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.hours} hours, ${Remaining.minutes} minutes, ${Remaining.seconds} seconds`);
 
   return (
     <>
