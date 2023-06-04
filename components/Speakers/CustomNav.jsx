@@ -20,7 +20,7 @@ const CustomNav = ({currentSlide, setCurrentSlide, speakerslen}) => {
 
 
     return (
-      <div className="sm:hidden md:     w-[420px]        flex flex-row justify-between sm:">
+      <div className="hidden sm:block w-[420px]  flex flex-row justify-between sm:">
         {currentSlide ? (
           <Image
             src="/shapes/left_arrow.png"
