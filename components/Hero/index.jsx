@@ -21,7 +21,7 @@ setRemaining(object)
   }, 1000);
 }, [])
 
-Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.hours} hours, ${Remaining.minutes} minutes, ${Remaining.seconds} seconds`);
+// Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.hours} hours, ${Remaining.minutes} minutes, ${Remaining.seconds} seconds`);
 
   return (
     <>
@@ -53,7 +53,7 @@ Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.ho
    {Remaining.days} <sub  className="text-[10px] translate-y-[20%]" >Days</sub> : {Remaining.hours} <sub  className="text-[10px] translate-y-[20%]" >Hours</sub> : {Remaining.seconds} <sub  className="text-[10px] translate-y-[20%]" >Seconds</sub>
     </div>}
     </div>
-    <div className="flex items-center flex-col uppercase w-[260px] mt-[200px] h-[50px] ">
+    <div className="flex items-center flex-col uppercase w-[260px] mt-[50px] h-[50px] ">
       <h1   className=" text-[15.5px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 " >The</h1>
       <h1  className="  text-[25px] leading-[25px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100" >ultimate battle</h1>
     </div>
