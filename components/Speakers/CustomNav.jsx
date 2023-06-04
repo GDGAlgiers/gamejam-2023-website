@@ -20,7 +20,7 @@ const CustomNav = ({currentSlide, setCurrentSlide, speakerslen}) => {
 
 
     return (
-      <div className="hidden sm:block w-[420px]  flex flex-row justify-between sm:">
+      <div className="hidden md:flex w-[420px]  flex-row justify-between sm:">
         {currentSlide ? (
           <Image
             src="/shapes/left_arrow.png"
@@ -31,7 +31,7 @@ const CustomNav = ({currentSlide, setCurrentSlide, speakerslen}) => {
             onClick={slideLeft}
           />
         ) : null}
-        <div className="ml-auto">
+        {currentSlide < speakerslen - 1 ? <div className="ml-auto">
           <Image
             src="/shapes/right_arrow.png"
             alt="shape"
@@ -40,7 +40,7 @@ const CustomNav = ({currentSlide, setCurrentSlide, speakerslen}) => {
             className="cursor-pointer"
             onClick={slideRight}
           />
-        </div>
+        </div> : null}
       </div>
     );
   };
