@@ -14,10 +14,12 @@ const Card = (props) => {
     setHovered(false);
   }
 
+
+
   return (
-      <div className="h-[560px] w-[835px] flex justify-center items-center">
+      <div className="h-[51%px] w-[44%]           flex justify-center items-center">
         <div
-        className= {`bg-[url(/shapes/sp_frame.png)] h-[547px] w-[820px] bg-no-repeat bg-contain flex flex-row z-20 justify-between items-center relative ${props.selected ? null : 'blur-sm'}`}
+        className= {`h-[99%] w-[99%]             bg-[url(/shapes/sp_frame.png)] bg-no-repeat bg-contain flex flex-row z-20 justify-between items-center relative ${props.selected ? null : 'blur-sm scale-90'}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         >
@@ -26,7 +28,7 @@ const Card = (props) => {
             alt="shape"
             height={123}
             width={211}
-            className={`left-4 ${hovered ? 'blur-sm absolute brightness-50 transition-all duration-500' : ' !h-[400] relative'}`}
+            className={`left-4    ${hovered ? 'blur-sm absolute brightness-50 transition-all duration-500' : ' !h-[400] relative'}`}
           />
 
 
@@ -34,31 +36,32 @@ const Card = (props) => {
 
 
 
-          <div className={`flex flex-col items-center relative bottom-1 ${hovered ? 'justify-around' : 'justify-center'}`}>
+          <div className={`bottom-1                flex flex-col items-center relative  justify-evenly ${hovered ? 'h-[94%]' : null}`}>
 
-            <div className={`relative flex justify-center items-center ${hovered ? 'scale-[.6] ' : null} transition-transform duration-300 ease-in-out`}>
+            <div className={`relative flex justify-center items-center transition-transform duration-300 ease-in-out`}>
         
               <Image
-              src={`/images/mentor_image1.png`}
+              src={props.image}
               alt="shape"
-              height={275}
-              width={275}
+              height={hovered ? 174 : 275}
+              width={hovered ? 174 : 275}
               className="rounded-full z-40 absolute"
               />
               <Image
               src="/shapes/Ellipse_colors.png"
               alt="shape"
-              height={286}
-              width={286}
-              className="z-30 trans"/>
+              height={hovered? 181 : 286}
+              width={hovered? 181 : 286}
+              className="z-30"/>
 
             </div>
 
-            <h2 className={`text-5xl border-b-4 border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser transition-all duration-500' : 'hidden'}`}>{props.name}</h2>
+            <h2 className={`relative bottom-5 text-5xl border-b-4               border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
+            
 
-            <div className={`  flex justify-center items-center relative bottom-5 z-40`}>
+            <div className={`bottom-5         flex justify-center items-center relative z-40`}>
 
-              <h2 className={`z-30 font-PTChaser font absolute text-[#4EFEF6] text-4xl [text-shadow:_0_0px_10px_#4EFEF6] ${hovered ? 'hidden transition-all duration-500' : null}`}>Mentor</h2>
+              <h2 className={` text-4xl         z-30 font-PTChaser absolute text-[#4EFEF6] [text-shadow:_0_0px_10px_#4EFEF6] ${hovered ? 'hidden transition-all duration-500' : null}`}>Mentor</h2>
               <Image
               src="/shapes/mentor_title.png"
               alt="shape"
@@ -69,7 +72,7 @@ const Card = (props) => {
 
             </div>
         
-            <p className={hovered ? 'text-white text-xl w-[80%] text-center' : 'hidden'} >{props.description}</p>
+            <p className={hovered ? 'w-[89%] text-2xl bottom-12               text-white   text-center relative' : 'hidden'} >{props.description}</p>
           </div>
 
 
