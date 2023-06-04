@@ -12,8 +12,10 @@ module.exports = {
       "PTGilroy-Bold": ["PT-gilroy-bold", "sans-serif"],
     },
     extend: {
-      "gameJam-blue": "#4EFEF6",
-      "gameJam-yellow": "#FCBC05",
+      colors:{
+        "gameJam-blue": "#4EFEF6",
+        "gameJam-yellow": "#FCBC05",
+      },
     },
     screens: {
       sm: "560px",
