@@ -70,7 +70,7 @@ const Agenda = () => {
         setSelectedDay(day);
       };
     return (
-        <section className="w-full h-full">
+        <section className="w-full h-full" id="agenda">
             <SectionTitle title="Agenda"/>
             <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-center w-full min-h-screen">
                <div className="flex  justify-center lg:block p-4 lg:p-0">

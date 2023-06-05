@@ -7,7 +7,7 @@ import LogoGamejam from "../../public/images/About/LogoGameJam 2.png"
 const About = () => {
     return (
     <>
-      <section>
+      <section id="about">
             <SectionTitle title="About" />
         </section>
     <div  className="items-center justify-around lg:justify-center lg:gap-[100px] 2xl:gap-[150px] px-3 w-full font-PTGilroy-light h-[75vh] hidden md:flex 2xl:h-[86vh] "   >

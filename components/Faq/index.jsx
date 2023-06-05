@@ -24,7 +24,7 @@ const Faq = () => {
         }         
     ]
     return (
-        <section>
+        <section id="faq">
             <SectionTitle title="FAQ"/>
             <div className="flex flex-col font-PTChaser m-4 items-center justify-center">
                 {data.map(val=>{
