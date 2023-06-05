@@ -17,7 +17,7 @@ const Layout = ({ mainRef, children }) => {
           <main
             ref={mainRef}
             id="main"
-            className="flex-1 relative z-20 h-full overflow-y-scroll overflow-x-hidden no-scrollbar lg:pt-10 2xl:pt-16"
+            className="flex-1 relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 h-full overflow-y-scroll overflow-x-hidden no-scrollbar lg:pt-10 2xl:pt-16"
             style={{ perspective: "1px", transformStyle: "preserve-3d" }}
           >
             {children}

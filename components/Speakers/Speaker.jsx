@@ -17,9 +17,9 @@ const Speaker = (props) => {
 
 
   return (
-      <div className=" h-[248px] w-[369px]  sm:h-[328px] sm:w-[487px] md:w-[615px] md:h-[414px] lg:w-[552px] lg:h-[368px] 2xl:w-[827px] 2xl:h-[555px] flex justify-center items-center"> {/*h-[51%px] w-[44%] h-[560px] w-[835px]  */}
+      <div className=" h-[280px] py-4 sm:py-0 w-[340px] bg-contain transition-all duration-1000 sm:h-[328px] sm:w-[460px] md:w-[615px] md:h-[414px] lg:w-[552px] lg:h-[368px] 2xl:w-[827px] 2xl:h-[555px] flex justify-center items-center"> 
         <div
-        className= {`h-[99%] w-[99%]             bg-[url(/shapes/sp_frame.png)] bg-no-repeat bg-contain flex flex-row z-20 justify-between items-center relative ${props.selected ? null : 'blur-sm scale-90'}`}
+        className= {`h-[100%] w-[99%]   bg-[url(/shapes/sp_frame.png)] bg-no-repeat bg-contain flex flex-row z-20 justify-between items-center relative ${props.selected ? null : 'blur-sm scale-90'}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         >
@@ -28,7 +28,7 @@ const Speaker = (props) => {
             alt="shape"
             height={123}
             width={211}
-            className={`left-2  w-[26%] h-[65.6%] ${hovered ? 'blur-[2px] md:blur-sm  absolute brightness-50 transition-all duration-500' : ' !h-[400] relative'}`}
+            className={`left-2  w-[26%] h-[65.6%] ${hovered ? 'blur-[2px] md:blur-sm  absolute brightness-50 transition-all duration-1000' : ' !h-[400] relative'}`}
           />
 
 
@@ -36,9 +36,9 @@ const Speaker = (props) => {
 
 
 
-          <div className={`bottom-1                flex flex-col items-center relative  justify-evenly ${hovered ? 'h-[94%]' : 'w-[35%]'}`}>
+          <div className={`bottom-1  flex flex-col items-center relative  justify-evenly ${hovered ? 'h-[94%]' : 'w-[35%]'}`}>
 
-            <div className={` ${hovered ? 'w-[35%]' : 'w-[100%]'}  relative flex justify-center items-center transition-transform duration-300 ease-in-out`}>
+            <div className={` ${hovered ? 'w-[34%]' : 'w-[100%]'}  relative flex justify-center items-center transition-transform duration-1000 ease-in-out`}>
         
               <Image
               src={props.image}
@@ -56,12 +56,12 @@ const Speaker = (props) => {
 
             </div>
 
-            <h2 className={`relative bottom-5 text-lg top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl      border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
+            <h2 className={`relative bottom-5 text-[14px] top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl      border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
 
-            <div className={`bottom-2       flex justify-center items-center relative z-40`}>
+            <div className={`bottom-2   flex justify-center items-center relative z-40`}>
 
               <h2 className={`text-xl [text-shadow:_0_0px_8px_#4EFEF6] sm:text-2xl md:text-3xl 2xl:text-[42px]    z-30 font-PTChaser absolute text-[#56DBF5]  ${hovered ? 'hidden transition-all duration-500' : null}`}>Mentor</h2>
-              {/*text-4xl  */}
+              
               <Image
               src="/shapes/mentor_title.png"
               alt="shape"
@@ -72,14 +72,9 @@ const Speaker = (props) => {
 
             </div>
         
-            <p className={hovered ? 'text-xs  w-[89%]  sm:text-sm sm:bottom-4 md:text-lg lg:text-[16px] lg:bottom-6 2xl:text-2xl          text-white   text-center relative' : 'hidden'} >{props.description}</p>
-            {/*text-2xl bottom-12 */}
+            <p className={hovered ? 'text-xs  w-[90%] bottom-6 sm:text-sm sm:bottom-4 md:text-lg lg:text-[16px] lg:bottom-6 2xl:text-2xl  transition-all duration-1000 text-white   text-center relative' : 'hidden'} >{props.description}</p>
+          
           </div>
-
-
-
-
-
         
           <Image
           src="/shapes/controller1.png"
