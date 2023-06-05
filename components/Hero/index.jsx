@@ -21,7 +21,7 @@ setRemaining(object)
   }, 1000);
 }, [])
 
-// Remaining && console.log(`Remaining time: ${Remaining.days} days, ${Remaining.hours} hours, ${Remaining.minutes} minutes, ${Remaining.seconds} seconds`);
+
 
   return (
     <>
@@ -32,6 +32,8 @@ setRemaining(object)
     <div className="w-[613.15px] h-[80.64px] relative text-white mt-[70px]  2xl:w-[919.73px] 2xl:h-[120.96px] ">
       <Image alt="bg" src={counterbg2} className="2xl:w-[919.73px] 2xl:h-[120.96px]" />
       <Image alt="bg" src={counterbg} className=" w-[609.15px] h-[76.64px] absolute top-[50%] left-[50%] translate-x-[-50%] flex items-center translate-y-[-50%] 2xl:w-[913.73px] 2xl:h-[114.96px]  " />
+      <Image alt="left" src={right} className="hidden lg:block w-[400px]  absolute bottom-0 left-[98%] 2xl:w-[25vw]" />
+      <Image alt="left" src={left} className="hidden lg:block w-[400px]  absolute bottom-0 right-[98%]  2xl:w-[25vw] " />
    { Remaining &&  <div className="absolute top-[50%] left-[50%] translate-x-[-50%] flex items-center translate-y-[-50%]  text-[42px] gap-3 w-full justify-center 2xl:text-[64px] 2xl:gap-5 ">
    {Remaining.days} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Days</sub> : {Remaining.hours} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Hours</sub> : {Remaining.seconds} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Seconds</sub>
     </div>}
@@ -41,10 +43,8 @@ setRemaining(object)
       <h1  className="  text-[42px] leading-[42px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 2xl:text-[64px] 2xl:leading-[64px]" >ultimate battle</h1>
     </div>
     </div>
-    {/* Mobile Version */}
 
     <div className="w-full flex flex-col items-center h-[95vh] justify-center font-PTChaser md:hidden ">
-      {/* <SectionTitle title="Hero" /> */}
       <Image  alt="GamejamLogo" src={GamejamLogo}  className=" w-[370px] h-[126.51px] "  />
     <div className="w-[370px] h-[48.66px] relative text-white mt-[40px]  ">
       <Image alt="bg" src={counterbg2} className="w-[370px] h-[48.66px] " />

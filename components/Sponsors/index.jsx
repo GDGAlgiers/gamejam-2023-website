@@ -44,7 +44,7 @@ const Sponsors = () => {
     return (
         <section   >
             <SectionTitle title="Sponsors"/>
-            <div  className="font-PTGilroy-Bold hidden justify-between lg:justify-center lg:gap-[20px] items-center h-[85vh]  lg:pt-8 mt-5 px-3 lg:flex 2xl:h-[95vh]  " >
+            <div  className="font-PTGilroy-Bold hidden justify-between lg:justify-center lg:gap-[10px] items-center h-[85vh]  lg:pt-8 mt-5 px-3 lg:flex 2xl:h-[95vh]  " >
                 <Image  alt="Left arrow" src={Leftarrow} className="cursor-pointer translate-y-[-100%] " onClick={()=>handelLeft()}  ></Image>
                 {
                     currentImgs.map((SponsorImg,index)=>{

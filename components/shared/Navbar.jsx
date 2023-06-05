@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NavMobile from "./NavMobile";
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 z-20 py-4 w-full">
@@ -16,10 +17,15 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="flex flex-col cursor-pointer gap-2 lg:hidden">
-          <div className="h-[3px] w-9 bg-gray-700"></div>
-          <div className="h-[3px] w-9 bg-gray-700"></div>
-          <div className="h-[3px] w-9 bg-gray-700"></div>
+        <div className="flex relative flex-col lg:hidden">
+          <div className="flex flex-col cursor-pointer gap-2 lg:hidden">
+            <div className="h-[3px] w-9 bg-gray-700"></div>
+            <div className="h-[3px] w-9 bg-gray-700"></div>
+            <div className="h-[3px] w-9 bg-gray-700"></div>
+          </div>
+          {/* <div className="lg:hidden absolute top-2 right-0">
+            <NavMobile></NavMobile>
+          </div> */}
         </div>
       </div>
     </header>
