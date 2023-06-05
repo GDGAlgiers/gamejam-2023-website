@@ -10,7 +10,7 @@ const About = () => {
       <section>
             <SectionTitle title="About" />
         </section>
-    <div  className="items-center justify-between px-3 w-full font-PTGilroy-light h-[75vh] hidden md:flex 2xl:h-[86vh] "   >
+    <div  className="items-center justify-around lg:justify-center lg:gap-[100px] 2xl:gap-[150px] px-3 w-full font-PTGilroy-light h-[75vh] hidden md:flex 2xl:h-[86vh] "   >
         <div className="flex flex-col items-center gap-8">
             <div  className="w-[340px] h-[227px] relative 2xl:w-[519px] 2xl:h-[349px]"  >
             <Image alt="bg-layer-1" src={layer1}  className="w-[340px] h-[227px] 2xl:w-[519px] 2xl:h-[349px] "  />

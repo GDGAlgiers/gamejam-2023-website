@@ -4,7 +4,7 @@ import navItems from "@/data/nav";
 const SideNav = () => {
   const router = useRouter();
   return (
-    <div className="hidden lg:flex h-full flex-col justify-center">
+    <div className="hidden lg:flex h-full flex-col justify-center z-[9999]">
       <nav className="flex flex-col">
         {navItems.map((item, idx) => (
           <div

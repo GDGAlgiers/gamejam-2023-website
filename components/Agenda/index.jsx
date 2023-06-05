@@ -33,7 +33,11 @@ const Agenda = () => {
         "startTime":"01:30",
      "endTime":"02:00",
      "text": "To start, print out the hiking guide and map"
-    }],
+    },{"id":4,
+    "startTime":"02:00",
+ "endTime":"02:30",
+ "text": "To start, print out the hiking guide and map"
+}],
     "02":[{
         "id":0,
         "startTime":"00:00",
@@ -78,30 +82,30 @@ const Agenda = () => {
                 )}
                </div>
                <div className="hidden lg:block 2xl:hidden">
-                <div className="absolute top-[25%] left-[14%]">
-                    <Image src={LeftShape.src} alt="Image description" width={110} height={200}></Image>
+                <div className="absolute top-[28%] left-[25%]">
+                    <Image src={LeftShape.src} alt="Image description" width={100} height={180}></Image>
                 </div>
-                <div className="absolute bottom-[20%] right-[26%]">
-                    <Image src={BottomShape.src} alt="Image description" width={375} height={200}></Image>
+                <div className="absolute bottom-[18%] right-[32%]">
+                    <Image src={BottomShape.src} alt="Image description" width={450} height={200}></Image>
                 </div>
-                <div className="absolute top-[15%] right-[10%]">
-                    <Image src={RightShape.src} alt="Image description" width={100} height={100}></Image>
+                <div className="absolute top-[15%] right-[25%]">
+                    <Image src={RightShape.src} alt="Image description" width={110} height={100}></Image>
                 </div>
-                <div className="absolute top-[2%] left-[23%]">
-                    <Image src={TopShape.src} alt="Image description" width={420} height={200}></Image>
+                <div className="absolute top-[2%] left-[28%]">
+                    <Image src={TopShape.src} alt="Image description" width={480} height={200}></Image>
                 </div>
                </div>
                <div className="hidden 2xl:block">
-                <div className="absolute top-[28%] left-[13%]">
+                <div className="absolute top-[29%] left-[28%]">
                     <Image src={LeftShape.src} alt="Image description" width={150} height={300}></Image>
                 </div>
-                <div className="absolute bottom-[14%] right-[28%]">
+                <div className="absolute bottom-[12%] right-[34%]">
                     <Image src={BottomShape.src} alt="Image description" width={600} height={200}></Image>
                 </div>
-                <div className="absolute top-[22%] right-[13%]">
-                    <Image src={RightShape.src} alt="Image description" width={120} height={100}></Image>
+                <div className="absolute top-[22%] right-[27%]">
+                    <Image src={RightShape.src} alt="Image description" width={130} height={110}></Image>
                 </div>
-                <div className="absolute top-[2%] left-[24%]">
+                <div className="absolute top-[2%] left-[32%]">
                     <Image src={TopShape.src} alt="Image description" width={600} height={200}></Image>
                 </div>
                </div>

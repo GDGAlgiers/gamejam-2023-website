@@ -15,7 +15,7 @@ const Contact = () => {
     </section>
     <div className="flex flex-col justify-center items-center h-[55vh] ">
     <h1 className="text-white font-PTGilroy-Bold text-2xl  lg:text-3xl w-full text-center mb-2"> Still Have a Question ? </h1>
-    <div className="lg:flex items-center justify-evenly w-full mt-7 hidden">
+    <div className="lg:flex items-center justify-evenly w-[60%] mt-7 hidden">
       <Link href="https://twitter.com/GDG_Algiers">
         <Image  alt="Twitter Icone" src={Twitter} className="cursor-pointer w-[68px] h-[54px] " ></Image>
       </Link>
@@ -29,7 +29,7 @@ const Contact = () => {
       <Image  alt="Linkedin Icone" src={Linkedin} className="cursor-pointer  w-[53px] h-[49px]" ></Image>
       </Link>
     </div>
-    <Image alt="UnderIcones" src={Under} className="lg:translate-x-[10px] 2xl:w-[110%] hidden lg:block" ></Image>
+    <Image alt="UnderIcones" src={Under} className="lg:translate-x-[10px] w-[60%] hidden lg:block" ></Image>
     <div className="lg:hidden  flex items-center justify-evenly w-full mt-12 ">
     <Link href="https://twitter.com/GDG_Algiers">
         <Image  alt="Twitter Icone" src={Twitter} className="cursor-pointer w-[46px]" ></Image>
