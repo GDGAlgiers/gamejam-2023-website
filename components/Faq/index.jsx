@@ -26,7 +26,7 @@ const Faq = () => {
     return (
         <section id="faq">
             <SectionTitle title="FAQ"/>
-            <div className="flex flex-col font-PTChaser m-4 items-center justify-center">
+            <div className="flex flex-col font-PTChaser m-4 items-center justify-center md:gap-2">
                 {data.map(val=>{
                     return(
                         <Question key={val.id} question={val.question} answer={val.answer} />
