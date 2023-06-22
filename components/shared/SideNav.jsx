@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import navItems from "@/data/nav";
 const SideNav = () => {
+  
   const router = useRouter();
   
   return (

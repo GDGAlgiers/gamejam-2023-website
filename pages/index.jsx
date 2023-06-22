@@ -13,11 +13,14 @@ import { useEffect, useRef } from "react";
 
 export default function Home() {
   const mainRef = useRef(null);
+
   const handleScroll = (e) => {
-    if (mainRef.current) {
-      mainRef.current.scrollTop += e.deltaY;
-    }
+    // console.log(e.deltaY);
+    // if (mainRef.current) {
+    //   mainRef.current.scrollTop += e.deltaY;
+    // }
   };
+
   useEffect(() => {
     window.addEventListener("wheel", handleScroll, { passive: false });
 
@@ -25,11 +28,13 @@ export default function Home() {
       window.removeEventListener("wheel", handleScroll);
     };
   }, []);
+
   return (
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
+
       <Layout mainRef={mainRef}>
         <SectionContainer>
           <Hero />
