@@ -21,6 +21,7 @@ module.exports = {
       sm: "560px",
       md: "750px",
       lg: "1024px",
+      xl: "1280px",
       "2xl": "1480px",
       smmin: { min: "376px", max: "426px" },
     },

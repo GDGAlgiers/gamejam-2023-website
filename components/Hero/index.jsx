@@ -46,12 +46,13 @@ const Hero = () => {
         </div>
       
         <div className="flex items-center flex-col uppercase w-[434px] mt-[24px] 2xl:w-[651px] 2xl:mt-[34px] ">
-          <h1   className=" text-[26px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 2xl:text-[40px] " >The</h1>
-          <h1  className="  text-[42px] leading-[42px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 2xl:text-[64px] 2xl:leading-[64px]" >ultimate battle</h1>
+          <h1 className="text-[26px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF]  bg-gradient-stops-0 bg-gradient-stops-100 2xl:text-[40px] " >The</h1>
+          <h1 className="text-[42px] leading-[42px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 2xl:text-[64px] 2xl:leading-[64px]" >ultimate battle</h1>
         </div>
       
       </div>
 
+      {/* mobile version */}
       <div   className="w-full flex flex-col items-center h-[95vh] justify-center font-PTChaser md:hidden ">
         <Image  alt="GamejamLogo" src={GamejamLogo}  className=" w-[370px] h-[126.51px] "  />
         <div className="w-[370px] h-[48.66px] relative text-white mt-[40px]  ">
@@ -63,10 +64,12 @@ const Hero = () => {
             </div>
           }
         </div>
+
         <div className="flex items-center flex-col uppercase w-[260px] mt-[50px] h-[50px] ">
           <h1 className="text-[15.5px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100 " >The</h1>
           <h1 className="text-[25px] leading-[25px] text-transparent bg-clip-text bg-gradient-to-b from-[#FFFF] to--[#FFFF] bg-gradient-stops-0 bg-gradient-stops-100" >ultimate battle</h1>
         </div>
+        
       </div>
     </>
   );

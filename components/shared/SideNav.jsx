@@ -1,35 +1,63 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import navItems from "@/data/nav";
-const SideNav = () => {
+import { useEffect } from "react";
+import NavLink from "./NavLink";
+import scrollIntoView from 'scroll-into-view'
+
+const SideNav = ({ sectionsRef, navItems, setNavItems, observerRef, doNotObserveScroll }) => {
+
+  useEffect( () => {
+
+    //re-render child when parent props change
+    console.log('side nav re-rendered');
+    // console.log(observerRef);
+    // setNavItems( _prev => navItems);
+
+  }, [navItems, setNavItems])
+
+
+  const handleClick = (e) => {
+    
+    //get the index of clicked item 
+    const sectionIndex = navItems.findIndex(item => item.name === e.target.innerText);
+    if(sectionIndex < 0) return;
+
+    observerRef.current?.disconnect();
+    doNotObserveScroll();
+
+
+    // //set the item's activity
+    // setNavItems( prev => {
+    //   return prev.map( (prevItem, index) => {
+    //     return {...prevItem, isActive: index === sectionIndex}
+    //   })
+    // })
+
+    //scroll to the section having the target index
+    // sectionsRef.current[sectionIndex].scrollIntoView({ behavior: "smooth" })
+    
+    setTimeout( () => {
+      sectionsRef.current[sectionIndex].scrollIntoView({ behavior: "smooth" })
+      // scrollIntoView(sectionsRef.current[sectionIndex], () => {
+      //   console.log('scroll ended')
+      //   //set the item's activity
+      //   // setNavItems( prev => {
+      //   //   console.log('settings nav items')
+      //   //   return prev.map( (prevItem, index) => {
+      //   //     return {...prevItem, isActive: index === sectionIndex}
+      //   //   })
+      //   // })
   
-  const router = useRouter();
-  
+      // })
+
+    }, 1000)
+
+  }
+
+
   return (
     <div className="hidden lg:flex h-full flex-col justify-center z-[9999] ">
-      <nav className="flex flex-col mb-10">
-        {navItems.map((item, idx) => (
-          <div
-            key={idx}
-            className={`py-2 border-r-2 ${
-              router.asPath == item.redirectTo
-                ? "border-white"
-                : "border-gray-700"
-            } transition-all duration-700`}
-          >
-            <Link href={item.redirectTo}>
-              <p
-                className={`${
-                  router.asPath == item.redirectTo
-                    ? "font-extrabold text-white"
-                    : "font-medium text-gray-400"
-                } text-xl text-right pr-4`}
-              >
-                {item.name}
-              </p>
-            </Link>
-          </div>
-        ))}
+      <nav className="flex flex-col items-end mb-10" onClick={handleClick}>
+        {/* { navLinks } */}
+        { navItems.map( (item, index) => <NavLink key={item.name} index={index} name={item.name} isActive={item.isActive}/> )}
       </nav>
     </div>
   );

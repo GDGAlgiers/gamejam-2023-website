@@ -5,9 +5,9 @@ const About = () => {
 
     return (
         <>
-            <section id="about">
-                <SectionTitle title="About" />
-            </section>
+            
+            <SectionTitle title="About" />
+            
             
             <div className="pt-20 sm:pb-4 lg:pb-2">
                 <h2 className="flex justify-center">

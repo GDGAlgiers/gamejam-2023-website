@@ -9,25 +9,11 @@ import Partners from "@/components/Partners";
 import Sponsors from "@/components/Sponsors";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function Home() {
   const mainRef = useRef(null);
-
-  const handleScroll = (e) => {
-    // console.log(e.deltaY);
-    // if (mainRef.current) {
-    //   mainRef.current.scrollTop += e.deltaY;
-    // }
-  };
-
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll, { passive: false });
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
+  const sectionsRef = useRef([]);
 
   return (
     <>
@@ -35,37 +21,37 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
-      <Layout mainRef={mainRef}>
-        <SectionContainer>
-          <Hero />
+      <Layout mainRef={mainRef} sectionsRef={sectionsRef} >
+        <SectionContainer sectionIndex={0} ref={sectionsRef}>
+          <Hero/>
         </SectionContainer>
 
-        <SectionContainer>
-          <About />
+        <SectionContainer sectionIndex={1} ref={sectionsRef} >
+          <About/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Speakers />
+        <SectionContainer sectionIndex={2} ref={sectionsRef} >
+          <Speakers/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Agenda />
+        <SectionContainer sectionIndex={3} ref={sectionsRef} >
+          <Agenda/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Partners />
+        <SectionContainer sectionIndex={4} ref={sectionsRef} >
+          <Partners/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Sponsors />
+        <SectionContainer sectionIndex={5} ref={sectionsRef} >
+          <Sponsors/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Faq />
+        <SectionContainer sectionIndex={6} ref={sectionsRef} >
+          <Faq/>
         </SectionContainer>
 
-        <SectionContainer>
-          <Contact />
+        <SectionContainer sectionIndex={7} ref={sectionsRef} >
+          <Contact/>
         </SectionContainer>
       </Layout>
     </>

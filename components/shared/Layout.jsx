@@ -3,7 +3,69 @@ import Navbar from "./Navbar";
 import Follow from "./Follow";
 import SideNav from "./SideNav";
 import Shapes from "./Shapes";
-const Layout = ({ mainRef, children }) => {
+import { useEffect, useRef, useState } from "react";
+const Layout = ({ mainRef, sectionsRef, children }) => {
+
+  useEffect(() => {
+    // console.log('Layout rerendered')
+  })
+
+  const [navItems, setNavItems ] = useState(require('@/data/nav').default);
+
+  const observerRef = useRef(null);
+  const navItemsRef = useRef([]);
+
+  useEffect(() => {
+    // navItemsRef.current = useState()
+  }, [])
+  
+
+  const disconnectObserver = () => {
+    if(observerRef.current) observerRef.current.disconnect(); else return;
+    console.log('disconnectObserver');
+  }
+
+  useEffect(() => {
+    // console.log('new obs craeted. new nav items: ', navItems);
+    
+    observerRef.current = new IntersectionObserver( (entries) => {
+      
+      entries.forEach((entry) => {
+  
+        if(entry.isIntersecting){
+          
+          const targetIndex = sectionsRef.current.indexOf(entry.target);
+
+          if(targetIndex < 0) return;
+
+          return setNavItems(prev => {
+            return prev.map( (item, index) => {
+              return {...item, isActive: index === targetIndex}
+            })
+          })
+        }
+      });
+  
+    }, {
+      threshold: 0.4,
+    })
+
+    console.log('Layout rerendered')
+    console.log(observerRef)
+  }, [navItems])
+
+
+  useEffect(() => {
+    console.log('section ref changed')
+    //observe the sections
+    sectionsRef.current.forEach((section) => {
+      observerRef.current.observe(section);
+    });
+
+    return () => observerRef.current?.disconnect();
+    
+
+  }, [sectionsRef]);
 
   return (
     <div className="relative h-screen pt-6 overflow-hidden">
@@ -28,7 +90,7 @@ const Layout = ({ mainRef, children }) => {
             {children}
           </main>
 
-          <SideNav/>
+          <SideNav sectionsRef={sectionsRef} navItems={navItems} setNavItems={setNavItems} observerRef={observerRef} doNotObserveScroll={disconnectObserver}/>
 
         </div>
 

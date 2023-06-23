@@ -1,27 +1,35 @@
 const navItems = [
     {
         name: "Start",
-        redirectTo: "/",
+        isActive: true,
     },
     {
         name: "About",
-        redirectTo: "/#about"
+        isActive: false
     },
     {
-        name: "Workshops",
-        redirectTo: "/#workshops",
+        name: "Speakers & Mentors",
+        isActive: false
     },
     {
         name: "Agenda",
-        redirectTo: "/#agenda"
+        isActive: false
+    },
+    {
+        name: "Partners",
+        isActive: false
+    },
+    {
+        name: "Sponsors",
+        isActive: false
     },
     {
         name: "FaQ",
-        redirectTo: "/#faq"
+        isActive: false
     },
     {
         name: "Contact",
-        redirectTo: "/#contact"
+        isActive: false
     }
 ]
 export default navItems
