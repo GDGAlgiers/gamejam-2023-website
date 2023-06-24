@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer utilities {
   @variants responsive {
     .no-scrollbar::-webkit-scrollbar {
@@ -15,7 +16,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
   src: url("../public/fonts/Gilroy-ExtraBold.otf");
 }
 .container {
-  @apply w-11/12 mx-auto lg:w-[86%];
+  @apply w-11/12 mx-auto lg:w-[86%] xl:w-[88%];
 }
 
 .bg-text {

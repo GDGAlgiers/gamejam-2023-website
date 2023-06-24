@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SectionTitle from "../shared/SectionTitle";
 import Speaker from "./Speaker";
-import Image from "next/image";
 import CustomNav from "./CustomNav";
 
 import { Navigation, Pagination, A11y } from 'swiper';
@@ -43,66 +42,69 @@ const Speakers = () => {
     <section className="flex items-center flex-col justify-around h-[90vh] my-16 mx-8 md:mx-16">
 
       {/* Title Section */}
-      <SectionTitle title="Speakers&Mentors" />
-
+      <SectionTitle title="Speakers & Mentors" />
 
         {/* Cards */}
-    <div className="flex justify-center items-center mt-8">
-      <div className="hidden lg:block lg:w-[1200px] 2xl:w-[1900px]">
-          <Swiper
-          modules={[Navigation,Pagination, A11y]}
-          spaceBetween={50}
-          centeredSlides 
-          slidesPerView={2}
-          onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}>
+      <div className="flex justify-center items-center mt-8">
+        <div className="hidden lg:block lg:w-[1200px] 2xl:w-[1900px]">
+            <Swiper
+            modules={[Navigation,Pagination, A11y]}
+            spaceBetween={50}
+            centeredSlides 
+            slidesPerView={2}
+            onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}>
 
-            {speakers.map((speaker, index) => (
-              <SwiperSlide key={index}>
-                <Speaker
-                  key={speaker.id}
-                  name={speaker.name}
-                  description={speaker.description}
-                  selected={currentSlide === index}
-                  image={`/images/mentor_image${index}.png`}
-                />
-              </SwiperSlide>
-            ))}
-            
-            <div className="w-full flex flex-row justify-center items-end h-24">
-              <CustomNav speakerslen={speakers.length} setCurrentSlide={setCurrentSlide} currentSlide={currentSlide}/>
-            </div>
+              {speakers.map((speaker, index) => (
+                <SwiperSlide key={index}>
+                  <Speaker
+                    key={speaker.id}
+                    name={speaker.name}
+                    description={speaker.description}
+                    selected={currentSlide === index}
+                    image={`/images/mentor_image${index}.png`}
+                  />
+                </SwiperSlide>
+              ))}
+              
+              <div className="w-full flex flex-row justify-center items-end h-24">
+                <CustomNav speakerslen={speakers.length} setCurrentSlide={setCurrentSlide} currentSlide={currentSlide}/>
+              </div>
 
-          </Swiper>
-        </div> 
-        <div className="flex items-center justify-center lg:hidden w-[90vw]">
-          <Swiper
-          modules={[Navigation,Pagination, A11y]}
-          spaceBetween={40}
-          centeredSlides 
-          slidesPerView={1}
-          onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}>
+            </Swiper>
+          </div> 
 
-            {speakers.map((speaker, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex items-center justify-center">
-                <Speaker
-                  key={speaker.id}
-                  name={speaker.name}
-                  description={speaker.description}
-                  selected={currentSlide === index}
-                  image={`/images/mentor_image${index}.png`}
-                />
-                </div>
-              </SwiperSlide>
-            ))}
-            
-            <div className="w-full flex flex-row justify-center items-end h-24">
-              <CustomNav speakerslen={speakers.length} setCurrentSlide={setCurrentSlide} currentSlide={currentSlide}/>
-            </div>
+          <div className="flex items-center justify-center lg:hidden w-[90vw]">
+            <Swiper
+              modules={[Navigation,Pagination, A11y]}
+              spaceBetween={40}
+              centeredSlides 
+              slidesPerView={1}
+              onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}>
 
-          </Swiper>
-        </div> 
-    </div>
+              {speakers.map((speaker, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex items-center justify-center">
+                  
+                    <Speaker
+                      key={speaker.id}
+                      name={speaker.name}
+                      description={speaker.description}
+                      selected={currentSlide === index}
+                      image={`/images/mentor_image${index}.png`}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+              
+              <div className="w-full flex flex-row justify-center items-end h-24">
+                <CustomNav speakerslen={speakers.length} setCurrentSlide={setCurrentSlide} currentSlide={currentSlide}/>
+              </div>
+
+            </Swiper>
+
+          </div> 
+
+      </div>
       
     </section>
   );

@@ -1,34 +1,34 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import navItems from "@/data/nav";
-const SideNav = () => {
-  const router = useRouter();
-  
+import NavLink from "./NavLink";
+import scrollIntoView from 'scroll-into-view'
+
+const SideNav = ({ sectionsRef, navItems, observeSections, disconnectObserver, setCurrentSectionIndex}) => {
+
+  const handleClick = (e) => {
+    
+    //get the index of clicked item 
+    const sectionIndex = navItems.findIndex(item => item.name === e.target.innerText);
+    if(sectionIndex < 0) return;
+
+    disconnectObserver();
+    
+    scrollIntoView(
+      sectionsRef.current[sectionIndex], 
+      {align: {
+        top: 0,
+      }}, 
+      () => {
+        setCurrentSectionIndex(sectionIndex);
+        observeSections();
+      }
+    )
+  }
+
+
   return (
     <div className="hidden lg:flex h-full flex-col justify-center z-[9999] ">
-      <nav className="flex flex-col mb-10">
-        {navItems.map((item, idx) => (
-          <div
-            key={idx}
-            className={`py-2 border-r-2 ${
-              router.asPath == item.redirectTo
-                ? "border-white"
-                : "border-gray-700"
-            } transition-all duration-700`}
-          >
-            <Link href={item.redirectTo}>
-              <p
-                className={`${
-                  router.asPath == item.redirectTo
-                    ? "font-extrabold text-white"
-                    : "font-medium text-gray-400"
-                } text-xl text-right pr-4`}
-              >
-                {item.name}
-              </p>
-            </Link>
-          </div>
-        ))}
+      <nav className="flex flex-col items-end mb-10" onClick={handleClick}>
+        {/* { navLinks } */}
+        { navItems.map( (item, index) => <NavLink key={item.name} index={index} name={item.name} isActive={item.isActive}/> )}
       </nav>
     </div>
   );

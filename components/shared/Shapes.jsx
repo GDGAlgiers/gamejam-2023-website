@@ -1,5 +1,6 @@
 import Image from "next/image";
-const Shapes = () => {
+
+function Shapes(){
   return (
     <div className="hidden md:flex">
       {/* Stars */}
