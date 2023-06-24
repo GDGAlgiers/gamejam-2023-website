@@ -1,18 +1,7 @@
-import { useEffect } from "react";
 import NavLink from "./NavLink";
 import scrollIntoView from 'scroll-into-view'
 
-const SideNav = ({ sectionsRef, navItems, setNavItems, observerRef, doNotObserveScroll }) => {
-
-  useEffect( () => {
-
-    //re-render child when parent props change
-    console.log('side nav re-rendered');
-    // console.log(observerRef);
-    // setNavItems( _prev => navItems);
-
-  }, [navItems, setNavItems])
-
+const SideNav = ({ sectionsRef, navItems, observeSections, disconnectObserver, setCurrentSectionIndex}) => {
 
   const handleClick = (e) => {
     
@@ -20,36 +9,18 @@ const SideNav = ({ sectionsRef, navItems, setNavItems, observerRef, doNotObserve
     const sectionIndex = navItems.findIndex(item => item.name === e.target.innerText);
     if(sectionIndex < 0) return;
 
-    observerRef.current?.disconnect();
-    doNotObserveScroll();
-
-
-    // //set the item's activity
-    // setNavItems( prev => {
-    //   return prev.map( (prevItem, index) => {
-    //     return {...prevItem, isActive: index === sectionIndex}
-    //   })
-    // })
-
-    //scroll to the section having the target index
-    // sectionsRef.current[sectionIndex].scrollIntoView({ behavior: "smooth" })
+    disconnectObserver();
     
-    setTimeout( () => {
-      sectionsRef.current[sectionIndex].scrollIntoView({ behavior: "smooth" })
-      // scrollIntoView(sectionsRef.current[sectionIndex], () => {
-      //   console.log('scroll ended')
-      //   //set the item's activity
-      //   // setNavItems( prev => {
-      //   //   console.log('settings nav items')
-      //   //   return prev.map( (prevItem, index) => {
-      //   //     return {...prevItem, isActive: index === sectionIndex}
-      //   //   })
-      //   // })
-  
-      // })
-
-    }, 1000)
-
+    scrollIntoView(
+      sectionsRef.current[sectionIndex], 
+      {align: {
+        top: 0,
+      }}, 
+      () => {
+        setCurrentSectionIndex(sectionIndex);
+        observeSections();
+      }
+    )
   }
 
 

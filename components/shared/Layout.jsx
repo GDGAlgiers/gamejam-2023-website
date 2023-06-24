@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "./Navbar";
 import Follow from "./Follow";
 import SideNav from "./SideNav";
@@ -6,37 +5,37 @@ import Shapes from "./Shapes";
 import { useEffect, useRef, useState } from "react";
 const Layout = ({ mainRef, sectionsRef, children }) => {
 
-  useEffect(() => {
-    // console.log('Layout rerendered')
-  })
-
   const [navItems, setNavItems ] = useState(require('@/data/nav').default);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
   const observerRef = useRef(null);
-  const navItemsRef = useRef([]);
-
-  useEffect(() => {
-    // navItemsRef.current = useState()
-  }, [])
-  
 
   const disconnectObserver = () => {
     if(observerRef.current) observerRef.current.disconnect(); else return;
-    console.log('disconnectObserver');
+  }
+
+  const observeSections = () => {
+    sectionsRef.current.forEach((section) => {
+      observerRef.current.observe(section);
+    });
   }
 
   useEffect(() => {
-    // console.log('new obs craeted. new nav items: ', navItems);
-    
+    console.log('re')
+
     observerRef.current = new IntersectionObserver( (entries) => {
       
       entries.forEach((entry) => {
   
         if(entry.isIntersecting){
+
           
           const targetIndex = sectionsRef.current.indexOf(entry.target);
-
+          
           if(targetIndex < 0) return;
+          if(targetIndex === currentSectionIndex) return;
+
+          setCurrentSectionIndex(targetIndex);
 
           return setNavItems(prev => {
             return prev.map( (item, index) => {
@@ -47,25 +46,15 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       });
   
     }, {
-      threshold: 0.4,
+      threshold: 0.32,
     })
 
-    console.log('Layout rerendered')
-    console.log(observerRef)
-  }, [navItems])
-
-
-  useEffect(() => {
-    console.log('section ref changed')
     //observe the sections
-    sectionsRef.current.forEach((section) => {
-      observerRef.current.observe(section);
-    });
+    observeSections();
 
-    return () => observerRef.current?.disconnect();
-    
+    return () => observerRef.current.disconnect();
 
-  }, [sectionsRef]);
+  }, [sectionsRef, navItems, currentSectionIndex])
 
   return (
     <div className="relative h-screen pt-6 overflow-hidden">
@@ -90,7 +79,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
             {children}
           </main>
 
-          <SideNav sectionsRef={sectionsRef} navItems={navItems} setNavItems={setNavItems} observerRef={observerRef} doNotObserveScroll={disconnectObserver}/>
+          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} observerRef={observerRef} disconnectObserver={disconnectObserver}/>
 
         </div>
 
