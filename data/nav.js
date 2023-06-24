@@ -8,7 +8,7 @@ const navItems = [
         isActive: false
     },
     {
-        name: "Speakers & Mentors",
+        name: "Mentors",
         isActive: false
     },
     {

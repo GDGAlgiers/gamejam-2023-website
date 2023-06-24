@@ -25,9 +25,6 @@ module.exports = {
       "2xl": "1480px",
       smmin: { min: "376px", max: "426px" },
     },
-    backgroundImage: {
-      
-    }
   },
   plugins: [],
 };
