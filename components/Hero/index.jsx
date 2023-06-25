@@ -7,7 +7,7 @@ import right from "../../public/images/Hero/rightbleu.png"
 import { useState,useEffect } from "react";
 
 const Hero = () => {
-  const targetDate = new Date("2023-06-30");
+  const targetDate = new Date("2023-07-05");
 
   const [Remaining, setRemaining] = useState()
   useEffect(() => {

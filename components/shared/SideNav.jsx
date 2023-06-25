@@ -23,7 +23,6 @@ const SideNav = ({ sectionsRef, navItems, observeSections, disconnectObserver, s
     )
   }
 
-
   return (
     <div className="hidden lg:flex h-full flex-col justify-center z-[9999] ">
       <nav className="flex flex-col items-end mb-10" onClick={handleClick}>
