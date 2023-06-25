@@ -30,27 +30,27 @@ export default function Home() {
           <About/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={2} ref={sectionsRef} >
+        {/* <SectionContainer sectionIndex={2} ref={sectionsRef} >
           <Speakers/>
-        </SectionContainer>
+        </SectionContainer> */}
 
-        <SectionContainer sectionIndex={3} ref={sectionsRef} >
+        <SectionContainer sectionIndex={2} ref={sectionsRef} >
           <Agenda/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={4} ref={sectionsRef} >
+        <SectionContainer sectionIndex={3} ref={sectionsRef} >
           <Partners/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={5} ref={sectionsRef} >
+        <SectionContainer sectionIndex={4} ref={sectionsRef} >
           <Sponsors/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={6} ref={sectionsRef} >
+        <SectionContainer sectionIndex={5} ref={sectionsRef} >
           <Faq/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={7} ref={sectionsRef} >
+        <SectionContainer sectionIndex={6} ref={sectionsRef} >
           <Contact/>
         </SectionContainer>
       </Layout>
