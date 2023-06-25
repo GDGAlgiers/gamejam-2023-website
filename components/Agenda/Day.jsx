@@ -37,7 +37,7 @@ const Day=({dayString,position,updateSelectedDay})=>{
         Propreties.text1="30px"
         Propreties.text2="1.5rem"
         Propreties.text1BigScreen="35px"
-        Propreties.text2BigScreen="26px"
+        Propreties.text2BigScreen="40px"
         Propreties.color="FCBC05"
         Propreties.padding=4
         Propreties.order=2
@@ -79,9 +79,14 @@ const Day=({dayString,position,updateSelectedDay})=>{
         Propreties.color="860EF0"
         Propreties.order=1
     }
+    
     const handleClick = () => {
         updateSelectedDay(dayString);
-      };
+    };
+
+    console.log('position: ', position);
+    console.log('day: ', dayString);
+
     return (
             <>
             <div className="absolute hidden font-PTGilroy-Bold lg:flex  2xl:hidden justify-center items-center rounded-full  " style={{width:Propreties.size, height: Propreties.size, zIndex: 1, ...(Propreties.positionTop !== undefined
@@ -90,24 +95,26 @@ const Day=({dayString,position,updateSelectedDay})=>{
   ...(Propreties.positionLeft !== undefined
     ? { left: `${Propreties.positionLeft}` }
     : { right: `${Propreties.positionRight}` })}} onClick={handleClick}>
-        <div className="absolute" > 
+        <div className={"absolute"} > 
         {position == dayString && <Image
                         alt="border-bg" src={BorderBG.src}
                         width={200}
                         height={200}
                         />}
                         {Propreties.order == 1 && <Image
+                        className="cursor-pointer"
                         alt="border-bg" src={BorderBG.src}
                         width={170}
                         height={170}
                         />}
                         {Propreties.order == 3 && <Image
+                        className="cursor-pointer"
                         alt="border-bg" src={BorderBG.src}
-                        width={170}
-                        height={170}
+                        width={190}
+                        height={195}
                         />}
         </div>
-                <div className={`flex justify-between items-center flex-col p-4 rounded-full `} style={{width:Propreties.size, height: Propreties.size}}>
+                <div className={`flex justify-around items-center flex-col p-4 rounded-full `} style={{width:Propreties.size, height: Propreties.size}}>
                     <h4 className="text-center text-white font-[300]" style={{fontSize:`${Propreties.text1}`}}>Day</h4>
                     <p className={`text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2}`}}>{dayString}</p>
                 </div>
@@ -126,18 +133,20 @@ const Day=({dayString,position,updateSelectedDay})=>{
                         height={280}
                         />}
                         {Propreties.order == 3 && <Image
+                        className="cursor-pointer"
                         alt="border-bg" src={BorderBG.src}
                         width={200}
                         height={200}
                         />}
                         {Propreties.order == 1 && <Image
+                        className="cursor-pointer"
                         alt="border-bg" src={BorderBG.src}
                         width={220}
                         height={220}
                         />}
 
                     </div>
-                <div className={`flex justify-between ${position == dayString && "py-12"}  items-center flex-col p-8 rounded-full`} style={{width:Propreties.sizeBigScreen, height: Propreties.sizeBigScreen}}>
+                <div className={`flex justify-around ${position == dayString && "py-12"}  items-center flex-col p-8 rounded-full`} style={{width:Propreties.sizeBigScreen, height: Propreties.sizeBigScreen}}>
                     <h4 className="text-center text-white font-[300]" style={{fontSize:`${Propreties.text1BigScreen}`}}>Day</h4>
                     <p className={`text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`,fontSize:`${Propreties.text2BigScreen}`}}>{dayString}</p>
                 </div>
@@ -146,17 +155,18 @@ const Day=({dayString,position,updateSelectedDay})=>{
            <div onClick={handleClick} className={`flex m-2 lg:hidden justify-center items-center rounded-full `} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
            <div className="absolute" >
            {position != dayString && <Image
-      alt="border-bg" src={BorderBG.src}
-      width={100}
-      height={100}
-    />}
-    {position == dayString && <Image
-      alt="border-bg" src={BorderBG.src}
-      width={120}
-      height={120}
-    />}
+                className="cursor-pointer 1"
+                alt="border-bg" src={BorderBG.src}
+                width={100}
+                height={100}
+                />}
+                {position == dayString && <Image
+                alt="border-bg" src={BorderBG.src}
+                width={120}
+                height={120}
+                />}
            </div>
-                <div className={`flex  font-PTGilroy-Bold justify-between items-center flex-col p-${Propreties.padding} rounded-full`} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
+                <div className={`flex  font-PTGilroy-Bold justify-around items-center flex-col p-${Propreties.padding} rounded-full`} style={{width:Propreties.sizeMobile, height: Propreties.sizeMobile}}>
                     <h4 className={`text-lg text-center font-PTGilroy-Bold text-white font-[300]`}>Day</h4>
                     <p className={`text-sm text-center  font-PTGilroy-Bold`} style={{color:`#${Propreties.color}`}}>{dayString}</p>
                 </div>
