@@ -13,7 +13,7 @@ const Contact = () => {
     <section>
       <SectionTitle title="Contact" />
     </section>
-    <div className="flex flex-col justify-center items-center h-[55vh] ">
+    <div className="flex flex-col justify-center items-center h-[55vh] lg:w-[1240px] 2xl:w-[1900px]">
     <h1 className="text-white font-PTGilroy-Bold text-2xl  lg:text-3xl w-full text-center mb-2"> Still Have a Question ? </h1>
     <div className="lg:flex items-center justify-evenly w-[60%] mt-7 hidden">
       <Link href="https://twitter.com/GDG_Algiers">
