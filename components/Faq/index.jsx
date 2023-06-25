@@ -34,7 +34,7 @@ const Faq = () => {
         }      
     ]
     return (
-        <section>
+        <section id="faq">
             <SectionTitle title="FAQ"/>
             <div className="flex flex-col font-PTChaser m-4 items-center justify-center md:gap-2">
                 {data.map(val=>{

@@ -108,10 +108,10 @@ const Agenda = () => {
     };
     
     return (
-        <section className="w-full h-full">
+        <section id='agenda' className="w-full h-full">
             <SectionTitle title="Agenda"/>
-            <div className="flex lg:flex-col items-center w-full min-h-screen">
-               <div className="flex flex-col lg:flex-row gap-8 justify-center p-4 lg:p-0">
+            <div className="flex lg:flex-col pt-10 w-full min-h-screen">
+               <div className="flex flex-col lg:flex-row gap-8  lg:justify-center p-4 lg:p-0">
                {Days.map((day) => {
                 return(
                         <Day key={day} dayString={day} position={selectedDay} updateSelectedDay={updateDay}/>

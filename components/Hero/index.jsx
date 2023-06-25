@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <>
       {/* ALL version */}
-      <div className="z-100 w-full md:flex flex-col items-center h-[90vh] justify-center 2xl:h-[85vh] font-PTChaser hidden ">
+      <div id="#" className="z-[999] w-full md:flex flex-col items-center h-[90vh] justify-center 2xl:h-[85vh] font-PTChaser hidden ">
         {/* <SectionTitle title="Hero" /> */}
         <Image  alt="GamejamLogo" src={GamejamLogo}  className=" w-[706.55px] h-[241.58px] 2xl:w-[1059.83px] 2xl:h-[362.37px] "  />
         
