@@ -7,10 +7,10 @@ const navItems = [
         name: "About",
         isActive: false
     },
-    {
-        name: "Mentors",
-        isActive: false
-    },
+    // {
+    //     name: "Mentors",
+    //     isActive: false
+    // },
     {
         name: "Agenda",
         isActive: false
