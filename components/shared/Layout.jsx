@@ -64,7 +64,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       <div className="fixed top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
 
       <div className="relative h-full z-20">
-        <Navbar />
+        <Navbar sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} disconnectObserver={disconnectObserver}/>
 
         <div className="container h-full flex justify-between items-start mt-24">
 
@@ -79,7 +79,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
             {children}
           </main>
 
-          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} observerRef={observerRef} disconnectObserver={disconnectObserver}/>
+          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} disconnectObserver={disconnectObserver}/>
 
         </div>
 

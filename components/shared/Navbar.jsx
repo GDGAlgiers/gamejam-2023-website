@@ -3,7 +3,8 @@ import NavMobile from "./NavMobile";
 import { useState } from "react";
 import NavMobileButton from "./NavMobileButton";
 
-const Navbar = () => {
+const Navbar = ( navigationHandleProps ) => {
+  console.log('navigation props: ',navigationHandleProps)
   
   const [showMobileNavBar, setShowMobileNavBar ] = useState(false);
 
@@ -34,7 +35,7 @@ const Navbar = () => {
         <NavMobileButton showMobileNavBar={showMobileNavBar} setShowMobileNavBar={setShowMobileNavBar}/>
 
         <div className={`lg:hidden absolute top-[100%] right-0 ${showMobileNavBar ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0'} transition-all duration-300` }>
-          <NavMobile></NavMobile>
+          <NavMobile {...navigationHandleProps} ></NavMobile>
         </div>
 
       </div>
