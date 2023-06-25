@@ -10,7 +10,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <>
-    <section>
+    <section id="contact">
       <SectionTitle title="Contact" />
     </section>
     <div className="flex flex-col justify-center items-center h-[55vh] lg:w-[1240px] 2xl:w-[1900px]">

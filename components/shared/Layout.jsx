@@ -61,9 +61,9 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       <Shapes />
 
       {/* Background image */}
-      <div className="fixed top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
+      <div className="fixed   top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
 
-      <div className="relative h-full z-20">
+      <div className="relative h-full">
         <Navbar />
 
         <div className="container h-full flex justify-between items-start mt-24">
@@ -73,7 +73,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
           <main
             ref={mainRef}
             id="main"
-            className="flex-1 relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-20 h-full overflow-y-scroll overflow-x-hidden no-scrollbar lg:pt-10 2xl:pt-16"
+            className="flex-1 relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-0 lg:z-20 h-full overflow-y-scroll overflow-x-hidden no-scrollbar lg:pt-10 2xl:pt-16"
             style={{ perspective: "1px", transformStyle: "preserve-3d" }}
           >
             {children}

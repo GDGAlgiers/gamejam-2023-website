@@ -15,6 +15,10 @@
   }
 }
 
+
+.scroll-link {
+  scroll-behavior: smooth;
+}
 html {
   scroll-behavior: smooth !important;
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const NavMobileButton = ( { showMobileNavBar, setShowMobileNavBar }) => {
 
     return (
-        <div class="w-fit h-fit flex flex-col justify-center">
+        <div class="w-fit z-[999999] h-fit flex flex-col justify-center">
             <div class="relative py-3 sm:max-w-xl mx-auto">
                 <nav x-data="{ open: false }">
                     <button class="w-14 h-14 relative focus:outline-none rounded" onClick={() => setShowMobileNavBar(prev => !prev)}>

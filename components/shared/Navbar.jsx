@@ -25,15 +25,15 @@ const Navbar = () => {
 
       </div>
         
-      <div className="container flex lg:hidden justify-between items-center">
+      <div className="container z-[99999999] flex lg:hidden justify-between items-center">
         
-        <div className="relative w-[115px] h-[42px] lg:h-[62px] lg:w-[180px]">
+        <div className="relative w-[115px] z-[999999] h-[42px] lg:h-[62px] lg:w-[180px]">
           <Image src="/logos/gameJam.svg" alt="GDG Algiers GameJam" fill />
         </div>
 
         <NavMobileButton showMobileNavBar={showMobileNavBar} setShowMobileNavBar={setShowMobileNavBar}/>
 
-        <div className={`lg:hidden absolute top-[100%] right-0 ${showMobileNavBar ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0'} transition-all duration-300` }>
+        <div className={`lg:hidden absolute z-[9999] top-[0%] right-0 ${showMobileNavBar ? 'opacity-100 max-h-full' : 'opacity-0 hidden max-h-0'} transition-all duration-300` }>
           <NavMobile></NavMobile>
         </div>
 

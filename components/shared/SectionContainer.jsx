@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
 const SectionContainer = forwardRef(({sectionIndex, children }, sectionsRef) => {
-  return <section ref={(element) => sectionsRef.current[sectionIndex] = element} className="min-h-screen">{children}</section>;
+  return <section ref={(element) => sectionsRef.current[sectionIndex] = element} className="min-h-[80vh] lg:min-h-screen">{children}</section>;
 });
 
 SectionContainer.displayName = "SectionContainer";
