@@ -1,13 +1,15 @@
 const NavMobile = () => {
     return (
-        <div className=" ">
-                <ul className="flex max-h-[100px] no-scrollbar overflow-y-scroll overflow-y-scrolable flex-col gap-1 list-none">
-                    <li className="p-2 text-white">Start</li>
-                    <li className="p-2 text-white">About</li>
-                    <li className="p-2 text-white">Workshops</li>
-                    <li className="p-2 text-white">Agenda</li>
-                    <li className="p-2 text-white">Faq</li>
-                    <li className="p-2 text-white">Contact</li>
+        <div className="w-screen bg-red-500 h-full">
+                <ul className="flex w-full no-scrollbar flex-col gap-1 list-none">
+                    <li className="p-2 text-white text-center font-PTChaser">Home</li>
+                    <li className="p-2 text-white text-center font-PTChaser">About</li>
+                    <li className="p-2 text-white text-center font-PTChaser">Speakers & Mentors</li>
+                    <li className="p-2 text-white text-center font-PTChaser">Partners</li>
+                    <li className="p-2 text-white text-center font-PTChaser">Sponsors</li>
+                    <li className="p-2 text-white text-center font-PTChaser">Agenda</li>
+                    <li className="p-2 text-white text-center font-PTChaser">FAQ</li>
+                    <li className="p-2 text-white text-center font-PTChaser">Contact Us</li>
                 </ul>
         </div>
     )
