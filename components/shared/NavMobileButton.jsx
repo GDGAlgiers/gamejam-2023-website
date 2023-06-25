@@ -1,7 +1,11 @@
 import React from 'react'
 
 const NavMobileButton = ( { showMobileNavBar, setShowMobileNavBar }) => {
+    const x = `border: 1px solid;
 
+    border-image-source: linear-gradient(90deg, #FCBC05 -469.62%, #C9686E -234.69%, #8900EF 24.55%, #4EFEF6 340.49%);
+    
+    `
     return (
         <div class="w-fit z-[999999] h-fit flex flex-col justify-center">
             <div class="relative py-3 sm:max-w-xl mx-auto">

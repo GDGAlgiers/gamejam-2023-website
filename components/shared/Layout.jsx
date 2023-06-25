@@ -79,7 +79,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
             {children}
           </main>
 
-          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} observerRef={observerRef} disconnectObserver={disconnectObserver}/>
+          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} disconnectObserver={disconnectObserver}/>
 
         </div>
 
