@@ -22,38 +22,38 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
-      <Layout mainRef={mainRef} sectionsRef={sectionsRef} >
+      <Layout mainRef={mainRef} sectionsRef={sectionsRef}>
         <SectionContainer sectionIndex={0} ref={sectionsRef}>
-          <Hero/>
+          <Hero />
         </SectionContainer>
 
-        <SectionContainer sectionIndex={1} ref={sectionsRef} >
-          <About/>
+        <SectionContainer sectionIndex={1} ref={sectionsRef}>
+          <About />
         </SectionContainer>
 
         {/* <SectionContainer sectionIndex={2} ref={sectionsRef} >
           <Speakers/>
         </SectionContainer> */}
 
-        <SectionContainer sectionIndex={2} ref={sectionsRef} >
-          <Agenda/>
+        <SectionContainer sectionIndex={2} ref={sectionsRef}>
+          <Agenda />
         </SectionContainer>
 
-        <SectionContainer sectionIndex={3} ref={sectionsRef} >
+        {/* <SectionContainer sectionIndex={3} ref={sectionsRef} >
           <Partners/>
-        </SectionContainer>
+        </SectionContainer> */}
 
         {/* <SectionContainer sectionIndex={4} ref={sectionsRef} >
           <Sponsors/>
         </SectionContainer> */}
 
-        <SectionContainer sectionIndex={4} ref={sectionsRef} >
-          <Faq/>
+        <SectionContainer sectionIndex={4} ref={sectionsRef}>
+          <Faq />
         </SectionContainer>
 
-        <SectionContainer sectionIndex={5} ref={sectionsRef} >
-          <Contact/>
-          <Footer/>
+        <SectionContainer sectionIndex={5} ref={sectionsRef}>
+          <Contact />
+          <Footer />
         </SectionContainer>
       </Layout>
     </>
