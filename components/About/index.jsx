@@ -4,15 +4,59 @@ import Badge from "../../public/images/About/GDG_Badge.png"
 import layer1 from "../../public/images/About/bg-layer1.png"
 import layer2 from "../../public/images/About/bg-layer2.png"
 import LogoGamejam from "../../public/images/About/LogoGameJam 2.png"
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 const About = () => {
+
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Only trigger the animation once
+        rootMargin: '0px 0px -32% 0px',
+      });
+    
+      const animationVariants = {
+        hidden: {
+          opacity: 0,
+          y: 50,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      };
+      const animationVariantsTitle = {
+        hidden: {
+          opacity: 0,
+          x: -100,
+        },
+        visible: {
+          opacity: 1,
+          x: 0,
+        },
+      };
     return (
         <>
-            <section id="about">
+          <motion.div
+               ref={ref}
+               initial="hidden"
+               animate={inView ? 'visible' : 'hidden'}
+               variants={animationVariantsTitle}
+               transition={{ duration: 0.8}}
+              >
+                <section  id="about">
                 <SectionTitle title="About" />
-            </section>
-
-            <div id='about' className="items-center justify-around lg:justify-center lg:gap-[100px] 2xl:gap-[150px] px-3 w-full font-PTGilroy-light h-[75vh] hidden md:flex 2xl:h-[86vh] "   >
-                <div className="flex flex-col items-center gap-8">
+                </section>
+              </motion.div>
+           
+            
+            <motion.div
+               ref={ref}
+               initial="hidden"
+               animate={inView ? 'visible' : 'hidden'}
+               variants={animationVariants}
+               transition={{ duration: 1}}
+            >
+                <div  className="items-center justify-around lg:justify-center lg:gap-[100px] 2xl:gap-[150px] px-3 w-full font-PTGilroy-light h-[75vh] hidden md:flex 2xl:h-[86vh] "   >
+                <div  className="flex flex-col items-center gap-8" >
                     <div className="w-[340px] h-[227px] relative 2xl:w-[519px] 2xl:h-[349px]"  >
                     
                         <Image alt="bg-layer-1" src={layer1}  className="w-[340px] h-[227px] 2xl:w-[519px] 2xl:h-[349px] "  />
@@ -60,7 +104,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div id='About'  className="flex flex-col items-center pt-10 gap-12 w-full font-PTGilroy-light h-[85vh] md:hidden "   >
+            <div className="flex flex-col items-center pt-10 gap-12 w-full font-PTGilroy-light h-[85vh] md:hidden "   >
                 <div  className="w-[340px] h-[227px] relative"  >
                     
                     <Image alt="bg-layer-1" src={layer1}  className="w-[340px] h-[227px] "  />
@@ -97,6 +141,7 @@ const About = () => {
 
                 </div>
             </div>
+            </motion.div>
         </>  
     )
 }
