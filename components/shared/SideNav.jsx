@@ -24,7 +24,7 @@ const SideNav = ({ sectionsRef, navItems, observeSections, disconnectObserver, s
   }
 
   return (
-    <div className="hidden lg:flex h-full flex-col justify-center z-[9999] ">
+    <div className="hidden lg:flex h-full flex-col items-center justify-center z-[9999] pb-24 ">
       <nav className="flex flex-col items-end mb-10" onClick={handleClick}>
         {/* { navLinks } */}
         { navItems.map( (item, index) => <NavLink key={item.name} index={index} name={item.name} isActive={item.isActive}/> )}

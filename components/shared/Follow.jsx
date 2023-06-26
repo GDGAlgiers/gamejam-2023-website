@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Follow = () => {
 
   return (
-    <div className="hidden lg:flex flex-col justify-center items-start h-full -ml-20 z-[9999]">
+    <div className="hidden lg:flex flex-col justify-center items-center h-full -ml-20 z-[9999] pb-24">
       <div className="flex items-center justify-start gap-4 text-xl font-extrabold text-white rotate-90 mb-10">
 
         <h3>Follow us</h3>

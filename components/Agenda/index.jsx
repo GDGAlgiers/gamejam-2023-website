@@ -1,17 +1,13 @@
 import { useState } from "react";
 import SectionTitle from "../shared/SectionTitle";
 import Day from "./Day";
-import DayAgenda from "./DayAgenda";
 import Image from "next/image";
-import TopShape from "../../public/Agenda/images/AgendaShapeTop.png"
-import BottomShape from "../../public/Agenda/images/AgendaShapeBottom.png"
-import LeftShape from "../../public/Agenda/images/AgendaShapeLeft.png"
-import RightShape from "../../public/Agenda/images/AgendaShapeRight.png"
+import LeftShape from "../../public/Agenda/images/left.png"
+import RightShape from "../../public/Agenda/images/right.png"
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 const Agenda = () => {
-    const [selectedDay, setSelectedDay] = useState("01");
-    const StupidAgenda={
+    const agenda={
         
         "01":[
         {
@@ -22,9 +18,9 @@ const Agenda = () => {
         },
         {    
             "id":1,
-            "startTime":"18:00",
-            "endTime":"18:30 ",
-            "text": "Hackathon start"
+            "startTime":"18:30",
+            "endTime":" ",
+            "text":"gamejam start"
         }],
         "02":[
             {
@@ -60,9 +56,6 @@ const Agenda = () => {
     }
     
     const Days=["01","02","03","04","05","06"]
-    const updateDay = (day) => {
-        setSelectedDay(day);
-    };
     const [ref, inView] = useInView({
         triggerOnce: true, // Only trigger the animation once
         // rootMargin: '0px 0px -32% 0px',
@@ -90,7 +83,7 @@ const Agenda = () => {
         },
       }
     return (
-        <section id='agenda' className="w-full h-full">
+        <section id='agenda' className="w-full h-full pt-4 min-h-screen ">
             <motion.div
                ref={ref}
                initial="hidden"
@@ -107,16 +100,39 @@ const Agenda = () => {
                variants={animationVariants}
                transition={{ duration: 0.8}}
               >
-                <div className="flex lg:flex-col pt-10 w-full min-h-screen">
-                <div className="flex flex-col lg:flex-row gap-8  lg:justify-center p-4 lg:p-0">
-                {Days.map((day) => {
-                    return(
-                            <Day key={day} dayString={day} position={selectedDay} updateSelectedDay={updateDay}/>
-                    )
-                }
-                    )}
+                <div className="flex flex-col gap-8 lg:flex-row justify-center lg:gap-10  py-10  w-full ">
+                    <div className="flex flex-col gap-8 justify-center p-2 lg:p-0">
+                        {Days.map((day,i) => {
+                            if(i<3){
+                                return(
+                                    <Day key={day} dayString={day} agenda={agenda[day]}/>
+                            )
+                            }                         
+                        }
+                            )}
+                            
+                    </div>
+                    <div className="flex flex-col gap-8 justify-center p-2 lg:p-0">
+                        {Days.map((day,i) => {
+                           if(i>=3){
+                            return(
+                                <Day key={day} dayString={day} agenda={agenda[day]}/>
+                        )
+                        }  
+                        }
+                            )}
+                            
+                    </div>
                 </div>
-                    <DayAgenda agenda={StupidAgenda[selectedDay]}></DayAgenda>
+                <div className="hidden lg:flex justify-center w-full">
+                    <div className="lg:hidden 2xl:flex justify-around  px-10  pb-20 w-[70%]">
+                        <Image src={LeftShape.src} alt="left" width={300} height={200} />
+                        <Image src={RightShape.src} alt="right" width={300} height={200} />
+                    </div>
+                    <div className="2xl:hidden lg:flex justify-around  px-10  pb-20 w-[70%]">
+                        <Image src={LeftShape.src} alt="left" width={200} height={200} />
+                        <Image src={RightShape.src} alt="right" width={200} height={200} />
+                    </div>
                 </div>
             </motion.div>
             
