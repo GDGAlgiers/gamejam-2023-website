@@ -3,7 +3,7 @@ import SectionTitle from "../shared/SectionTitle";
 import Badge from "../../public/images/About/GDG_Badge.png";
 import layer1 from "../../public/images/About/bg-layer1.png";
 import layer2 from "../../public/images/About/bg-layer2.png";
-import LogoGamejam from "../../public/images/About/LogoGameJam 2.png";
+import LogoGamejam from "../../public/images/About/LogoGameJam2.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
