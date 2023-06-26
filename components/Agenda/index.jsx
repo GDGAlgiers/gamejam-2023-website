@@ -20,7 +20,7 @@ const Agenda = () => {
             "id":1,
             "startTime":"18:30",
             "endTime":" ",
-            "text":"gamejam start"
+            "text": "GameJam start"
         }],
         "02":[
             {

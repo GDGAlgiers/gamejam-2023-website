@@ -1,6 +1,24 @@
 import Image from "next/image";
+import { motion, useAnimate } from 'framer-motion';
+import { useEffect } from "react";
 
 function Shapes(){
+  const [rightCross, animateRightCross ] = useAnimate();
+
+  const animationRotate = {
+    hidden: {
+        opacity: 0,
+        y: 50,
+    },
+    visible: {
+      rotate: 90,
+      transition: {
+        duration: 1,
+        x: 10,
+      }
+    },
+  };
+  
   return (
     <div className="hidden md:flex">
       {/* Stars */}
@@ -13,9 +31,19 @@ function Shapes(){
       <div className="absolute top-24 right-1/3 z-10">
         <Image src="/shapes/star.png" alt="shape" height={69} width={69} />
       </div>
-      <div className="absolute top-1/3 right-1/4 z-10">
+      
+      
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{scale: [1, 2], opacity: [0.3, 1]}}
+        variants={animationRotate}
+        transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse', }}
+        className="absolute top-1/3 right-1/4 z-10"
+      >
         <Image src="/shapes/star.png" alt="shape" height={69} width={69} />
-      </div>
+      </motion.div>
+
       <div className="absolute bottom-6 right-6 z-10">
         <Image src="/shapes/star.png" alt="shape" height={69} width={69} />
       </div>
@@ -51,7 +79,15 @@ function Shapes(){
           className="rotate-90"
         />
       </div>
-      <div className="absolute top-1/2 right-1/3 z-10">
+      
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{scale: [1, 2]}}
+        variants={animationRotate}
+        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse', }}
+        className="absolute top-1/2 right-80 z-10"
+      >
         <Image
           src="/shapes/rectangular.png"
           alt="shape"
@@ -59,7 +95,8 @@ function Shapes(){
           width={18}
           className="rotate-180"
         />
-      </div>
+      </motion.div>
+      
       <div className="absolute top-1/2 left-12 z-10">
         <Image
           src="/shapes/rectangular.png"
@@ -80,13 +117,29 @@ function Shapes(){
       </div>
 
       {/* Triangles */}
-      <div className="absolute top-48 left-1/4 z-10">
+      
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{scale: [1, 1.5], opacity: [0.5, 0.8]}}
+        variants={animationRotate}
+        transition={{ duration: 2, ease: 'linear', repeat: Infinity, repeatType: 'reverse', repeatDelay: 0 }}
+        className="absolute top-48 left-1/4 z-10"
+      >
         <Image src="/shapes/triangle.png" alt="shape" height={28} width={26} />
-      </div>
+      </motion.div>
+
       <div className="absolute top-1/2 right-1/4 z-10">
         <Image src="/shapes/triangle.png" alt="shape" height={28} width={26} />
       </div>
-      <div className="absolute bottom-1/4 left-1/4 z-10">
+
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{scale: [1, 1.5]}}
+        transition={{ duration: 0.7, ease: 'linear', repeat: Infinity, repeatType: 'reverse', repeatDelay: 0 }}
+        className="absolute bottom-1/4 left-1/4 z-10"
+      >
         <Image
           src="/shapes/triangle.png"
           alt="shape"
@@ -94,12 +147,20 @@ function Shapes(){
           width={37}
           className="rotate-45"
         />
-      </div>
+      </motion.div>
 
       {/* Squares */}
-      <div className="absolute top-1/2 left-1/4 z-10">
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{rotate: 360}}
+        variants={animationRotate}
+        transition={{ duration: 2, ease: 'linear', repeat: Infinity, repeatType: 'loop', repeatDelay: 0 }}
+        className="absolute top-1/2 left-1/4  z-10"
+      >
         <Image src="/shapes/square.png" alt="shape" height={25} width={25} />
-      </div>
+      </motion.div>
+
       <div className="absolute bottom-12 right-48 z-10">
         <Image src="/shapes/square.png" alt="shape" height={25} width={25} />
       </div>
@@ -111,14 +172,32 @@ function Shapes(){
       <div className="absolute top-64 left-48 z-10">
         <Image src="/shapes/circle.png" alt="shape" height={15} width={15} />
       </div>
-      <div className="absolute top-1/2 right-96 z-10">
+      
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{opacity: [0, 1]}}
+        variants={animationRotate}
+        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse', }}
+        className="absolute top-1/2 right-96 z-10"
+      >
         <Image src="/shapes/circle.png" alt="shape" height={30} width={30} />
-      </div>
+      </motion.div>
+      
 
       {/* Crosses */}
-      <div className="absolute top-1/3 right-1/3 z-10">
-        <Image src="/shapes/cross.png" alt="shape" height={15} width={15} />
-      </div>
+      <motion.div
+        ref={rightCross}
+        initial="rotate"
+        animate={{rotate: [180, 90, 0]}}
+        variants={animationRotate}
+        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.5, }}
+        className="absolute top-1/3 right-1/3 z-10"
+      >
+        <>
+          <Image src="/shapes/cross.png" alt="shape" height={20} width={20} />
+        </>
+        </motion.div>
       <div className="absolute top-1/3 left-48 z-10">
         <Image src="/shapes/cross.png" alt="shape" height={8} width={8} />
       </div>

@@ -6,24 +6,25 @@ import layer2 from "../../public/images/About/bg-layer2.png"
 import LogoGamejam from "../../public/images/About/LogoGameJam 2.png"
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 const About = () => {
 
     const [ref, inView] = useInView({
         triggerOnce: true, // Only trigger the animation once
         rootMargin: '0px 0px -32% 0px',
-      });
+    });
     
-      const animationVariants = {
+    const animationVariants = {
         hidden: {
-          opacity: 0,
-          y: 50,
+            opacity: 0,
+            y: 50,
         },
         visible: {
           opacity: 1,
           y: 0,
         },
-      };
-      const animationVariantsTitle = {
+    };
+    const animationVariantsTitle = {
         hidden: {
           opacity: 0,
           x: -100,
@@ -32,7 +33,8 @@ const About = () => {
           opacity: 1,
           x: 0,
         },
-      };
+    };
+    
     return (
         <>
           <motion.div
