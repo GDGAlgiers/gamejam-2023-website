@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
           locale: "ar_algiera",
           url: "https://game-jam.gdgalgiers.com/",
           siteName: "GDG Algiers GameJam",
-          images: [{ url: "/images/og-image.png" }],
+          images: [{ url: "/images/og-image.jpg" }],
         }}
       />
       <Component {...pageProps} />
