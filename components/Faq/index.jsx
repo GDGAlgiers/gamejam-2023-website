@@ -81,7 +81,7 @@ const Faq = () => {
                variants={animationVariants}
                transition={{ duration: 0.8}}
             >
-                <div className="flex flex-col font-PTChaser m-4 items-center justify-center md:gap-2">
+                <div className="flex flex-col font-PTChaser m-4 mt-10 items-center justify-center md:gap-2">
                     {data.map(val=>{
                         return(
                             <Question key={val.id} question={val.question} answer={val.answer} />
