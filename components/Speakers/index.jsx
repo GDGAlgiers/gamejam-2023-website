@@ -13,6 +13,8 @@
 // import 'swiper/css/scrollbar';
 
 // import 'swiper/swiper.min.css';
+// import { motion } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
 
 
 
@@ -37,6 +39,31 @@
 //     },
 //   ]
 
+// const [ref, inView] = useInView({
+//     triggerOnce: true, // Only trigger the animation once
+//     rootMargin: '0px 0px -35% 0px',
+//   });
+
+//   const animationVariants = {
+//     hidden: {
+//       opacity: 0,
+//       y: 50,
+//     },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//     },
+//   };
+// const animationVariantsTitle = {
+//     hidden: {
+//       opacity: 0,
+//       x: 100,
+//     },
+//     visible: {
+//       opacity: 1,
+//       x: 0,
+//     },
+//   }
 
 //   return (
 //     <section className="flex items-center flex-col justify-around h-[90vh] my-16 mx-8 md:mx-16">
