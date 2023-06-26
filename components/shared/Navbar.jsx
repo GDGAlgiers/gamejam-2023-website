@@ -10,7 +10,7 @@ const Navbar = ( navigationHandleProps ) => {
   return (
     <header className="fixed top-0 left-0 z-20 py-4 w-full">
       <div className="container hidden lg:flex justify-between items-center">
-        <div className="relative w-[115px] h-[42px] lg:h-[62px] lg:w-[180px]">
+        <div className="relative w-[115px] h-[42px] lg:h-[55px] lg:w-[180px]">
           <Image src="/logos/gameJam.svg" alt="GDG Algiers GameJam" fill />
         </div>
 
@@ -27,7 +27,7 @@ const Navbar = ( navigationHandleProps ) => {
         
       <div className="container z-[99999999] flex lg:hidden justify-between items-center">
         
-        <div className="relative w-[115px] z-[999999] h-[42px] lg:h-[62px] lg:w-[180px]">
+        <div className="relative w-[115px] z-[999999] h-[42px] lg:h-[55px] lg:w-[180px]">
           <Image src="/logos/gameJam.svg" alt="GDG Algiers GameJam" fill />
         </div>
 

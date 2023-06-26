@@ -4,10 +4,11 @@ import counterbg from "../../public/images/Hero/CounterBg.png"
 import counterbg2 from "../../public/images/Hero/CounterBgLayer2.png"
 import left from "../../public/images/Hero/leftbleu.png"
 import right from "../../public/images/Hero/rightbleu.png"
+import RegiserBg from "../../public/images/Hero/registerBg.png"
 import { useState,useEffect } from "react";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import Link from "next/link";
 const Hero = () => {
   const targetDate = new Date("2023-07-05");
 
@@ -54,14 +55,20 @@ const Hero = () => {
               <div id="#" className="z-[999] w-full md:flex flex-col items-center h-[90vh] justify-center 2xl:h-[85vh] font-PTChaser hidden ">
                 {/* <SectionTitle title="Hero" /> */}
                 <Image  alt="GamejamLogo" src={GamejamLogo}  className=" w-[706.55px] h-[241.58px] 2xl:w-[1059.83px] 2xl:h-[362.37px] "  />
-                
-                <div className="w-[613.15px] h-[80.64px] relative text-white mt-[70px]  2xl:w-[919.73px] 2xl:h-[120.96px] ">
+                <button className="mt-10 font-PTChaser-bold text-2xl text-[#FCBC05]">
+                    <div className="absolute  left-1/2 -translate-x-1/2 ">
+                        <Image  src={RegiserBg.src} alt="RegiserBg"  width={300} height={100} />
+                      </div>
+                    <div className="relative py-5 mt-1 flex justify-center items-center w-full">
+                      <Link  href={"https://tripetto.app/run/GAK4MOA5Y5"}>Register Now</Link>
+                    </div>
+                </button>
+                <div className="w-[613.15px] h-[80.64px] relative text-white mt-10  2xl:w-[919.73px] 2xl:h-[120.96px] ">
                   
                   <Image alt="bg" src={counterbg2} className="2xl:w-[919.73px] 2xl:h-[120.96px]" />
                   <Image alt="bg" src={counterbg} className=" w-[609.15px] h-[76.64px] absolute top-[50%] left-[50%] translate-x-[-50%] flex items-center translate-y-[-50%] 2xl:w-[913.73px] 2xl:h-[114.96px]  " />
                   <Image alt="left" src={right} className="hidden lg:block w-[400px]  absolute bottom-0 left-[98%] 2xl:w-[25vw]" />
                   <Image alt="left" src={left} className="hidden lg:block w-[400px]  absolute bottom-0 right-[98%]  2xl:w-[25vw] " />
-                  
                   { Remaining &&  
                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] flex items-center translate-y-[-50%]  text-[42px] gap-3 w-full justify-center 2xl:text-[64px] 2xl:gap-5 ">
                       {Remaining.days} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Days</sub> : {Remaining.hours} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Hours</sub> : {Remaining.seconds} <sub  className="text-lg translate-y-[20%] 2xl:text-2xl " >Seconds</sub>
@@ -80,6 +87,14 @@ const Hero = () => {
               {/* mobile version */}
               <div   className="w-full flex flex-col items-center h-[95vh] justify-center font-PTChaser md:hidden ">
                 <Image  alt="GamejamLogo" src={GamejamLogo}  className=" w-[370px] h-[126.51px] "  />
+                <button className="mt-10 font-PTChaser-bold text-[16px] text-[#FCBC05]">
+                    <div className="absolute  left-1/2 -translate-x-1/2 ">
+                        <Image  src={RegiserBg.src} alt="RegiserBg"  width={300} height={100} />
+                      </div>
+                    <div className="relative py-2 mt-1 flex justify-center items-center w-full">
+                      <Link  href={"https://tripetto.app/run/GAK4MOA5Y5"}>Register Now</Link>
+                    </div>
+                </button>
                 <div className="w-[370px] h-[48.66px] relative text-white mt-[40px]  ">
                   <Image alt="bg" src={counterbg2} className="w-[370px] h-[48.66px] " />
                   <Image alt="bg" src={counterbg} className=" w-[367.59px] h-[46.25px] absolute top-[50%] left-[50%] translate-x-[-50%] flex items-center translate-y-[-50%]" />
