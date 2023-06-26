@@ -42,15 +42,15 @@ export default function Home() {
           <Partners/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={4} ref={sectionsRef} >
+        {/* <SectionContainer sectionIndex={4} ref={sectionsRef} >
           <Sponsors/>
-        </SectionContainer>
+        </SectionContainer> */}
 
-        <SectionContainer sectionIndex={5} ref={sectionsRef} >
+        <SectionContainer sectionIndex={4} ref={sectionsRef} >
           <Faq/>
         </SectionContainer>
 
-        <SectionContainer sectionIndex={6} ref={sectionsRef} >
+        <SectionContainer sectionIndex={5} ref={sectionsRef} >
           <Contact/>
         </SectionContainer>
       </Layout>

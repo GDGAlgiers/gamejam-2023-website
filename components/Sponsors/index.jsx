@@ -17,7 +17,8 @@ const Sponsors = () => {
 
     const [ref, inView] = useInView({
         triggerOnce: true, // Only trigger the animation once
-        rootMargin: '0px 0px -32% 0px',
+        // rootMargin: '0px 0px -32% 0px',
+        threshold: 0.42,
       });
     
       const animationVariants = {

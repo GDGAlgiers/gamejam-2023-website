@@ -21,7 +21,6 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
   }
 
   useEffect(() => {
-    console.log('re')
 
     observerRef.current = new IntersectionObserver( (entries) => {
       

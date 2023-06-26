@@ -4,7 +4,6 @@ import { useState } from "react";
 import NavMobileButton from "./NavMobileButton";
 
 const Navbar = ( navigationHandleProps ) => {
-  console.log('navigation props: ',navigationHandleProps)
   
   const [showMobileNavBar, setShowMobileNavBar ] = useState(false);
 
