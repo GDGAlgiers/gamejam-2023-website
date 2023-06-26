@@ -1,4 +1,5 @@
 import SectionTitle from "../shared/SectionTitle";
+import Footer from "../Footer";
 import Twitter from '../../public/images/ContactImages/Twitter.png'
 import Facebook from '../../public/images/ContactImages/Facebook.png'
 import Instagram from '../../public/images/ContactImages/Instagram.png'
@@ -9,6 +10,8 @@ import UnderR from '../../public/images/ContactImages/UnderIconesRes.png'
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
+
 const Contact = () => {
 
   const [ref, inView] = useInView({
@@ -59,7 +62,7 @@ const Contact = () => {
                variants={animationVariants}
                transition={{ duration: 0.8}}
             >
-            <div className="flex flex-col justify-center items-center h-[55vh] lg:w-[1240px] 2xl:w-[1900px]">
+            <div className="flex flex-col justify-center items-center h-[55vh] lg:w-[1240px] 2xl:w-[1900px] mb-16 lg:mb-44">
               <h1 className="text-white font-PTGilroy-Bold text-2xl  lg:text-3xl w-full text-center mb-2"> Still Have a Question ? </h1>
               <div className="lg:flex items-center justify-evenly w-[60%] mt-7 hidden">
                 <Link href="https://twitter.com/GDG_Algiers">
@@ -96,7 +99,6 @@ const Contact = () => {
               </div>
           <Image alt="UnderIcones" src={UnderR} className="translate-x-[-15px] block lg:hidden " ></Image>  
       </div>
-
     </motion.div>
     </>
   );

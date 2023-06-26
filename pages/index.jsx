@@ -9,6 +9,7 @@ import Partners from "@/components/Partners";
 import Sponsors from "@/components/Sponsors";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import { useRef } from "react";
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
 
         <SectionContainer sectionIndex={5} ref={sectionsRef} >
           <Contact/>
+          <Footer/>
         </SectionContainer>
       </Layout>
     </>

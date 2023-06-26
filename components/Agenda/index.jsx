@@ -24,7 +24,7 @@ const Agenda = () => {
             "id":1,
             "startTime":"18:00",
             "endTime":"18:30 ",
-            "text": "Hackathon start"
+            "text": "GameJam start"
         }],
         "02":[
             {
