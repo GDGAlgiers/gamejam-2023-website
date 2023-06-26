@@ -47,11 +47,11 @@ export default function Home() {
           <Sponsors/>
         </SectionContainer> */}
 
-        <SectionContainer sectionIndex={4} ref={sectionsRef}>
+        <SectionContainer sectionIndex={3} ref={sectionsRef}>
           <Faq />
         </SectionContainer>
 
-        <SectionContainer sectionIndex={5} ref={sectionsRef}>
+        <SectionContainer sectionIndex={4} ref={sectionsRef}>
           <Contact />
           <Footer />
         </SectionContainer>
