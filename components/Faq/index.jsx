@@ -20,7 +20,7 @@ const Faq = () => {
       id: 3,
       question: "When will it take place?",
       answer:
-        "the hachathon will take place from the 2nd of july till the 7th of july.",
+        "the hachathon will take place from the 5th of july till the 10th of july.",
     },
     {
       id: 4,
