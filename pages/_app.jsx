@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { DefaultSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 
 //import fontawesome styles
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
         }}
       />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
