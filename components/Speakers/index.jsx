@@ -80,12 +80,27 @@ const Speakers = () => {
   };
 
   return (
-    <section className="flex items-center flex-col justify-around h-[90vh] my-16 mx-8 md:mx-16">
+    
+    <motion.section
+      id="mentors" 
+      className="flex items-center flex-col justify-around h-[90vh] my-16 mx-8 md:mx-16"
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={animationVariantsTitle}
+      transition={{ duration: 0.8 }}>
       {/* Title Section */}
       <SectionTitle title="Mentors" />
 
       {/* Cards */}
-      <div className="flex justify-center items-center mt-8">
+      <motion.div 
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={animationVariants}
+        transition={{ duration: 1 }}
+        className="flex justify-center items-center mt-8"
+      >
         <div className="hidden lg:block lg:w-[1200px] 2xl:w-[1900px]">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
@@ -147,8 +162,8 @@ const Speakers = () => {
             </div>
           </Swiper>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

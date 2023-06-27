@@ -74,11 +74,12 @@ const Sponsors = () => {
     return (
         <section>
              <motion.div
-               ref={ref}
-               initial="hidden"
-               animate={inView ? 'visible' : 'hidden'}
-               variants={animationVariantsTitle}
-               transition={{ duration: 0.8}}
+                id="Sponsors"
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={animationVariantsTitle}
+                transition={{ duration: 0.8}}
               >
                   <SectionTitle title="Sponsors"/>  
               </motion.div>
@@ -90,7 +91,7 @@ const Sponsors = () => {
                variants={animationVariants}
                transition={{ duration: 0.8}}
               >
-                                    <div id="Sponsors" className="font-PTGilroy-Bold hidden justify-between lg:justify-center lg:gap-[10px] items-center h-[85vh]  lg:pt-8 mt-5 px-3 lg:flex 2xl:h-[95vh]  " >
+                                    <div className="font-PTGilroy-Bold hidden justify-between lg:justify-center lg:gap-[10px] items-center h-[85vh]  lg:pt-8 mt-5 px-3 lg:flex 2xl:h-[95vh]  " >
                                     <Image  alt="Left arrow" src={Leftarrow} className="cursor-pointer translate-y-[-100%] " onClick={()=>handelLeft()}  ></Image>
                                     {
                                         currentImgs.map((SponsorImg,index)=>{
