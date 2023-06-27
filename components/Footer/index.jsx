@@ -9,18 +9,18 @@ const Footer = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger the animation once
-    // rootMargin: '0px 0px -32% 0px',
-    threshold: 0.42,
+    // rootMargin: '0px 0px 0px 0px',
+    threshold: 0.3,
+    root: null,
+    initialInView: true,
   });
 
   const animationVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
     },
     visible: {
       opacity: 1,
-      y: 0,
     },
   };
 
@@ -31,6 +31,7 @@ const Footer = () => {
       animate={inView ? 'visible' : 'hidden'}
       variants={animationVariants}
       transition={{ duration: 0.8}}
+      className='h-fit absolute bottom-0 -translate-y-6 md:-translate-y-16 xl:-translate-y-24 left-0 right-0 mx-auto'
     >
       <div className='text-center text-xl sm:text-2xl lg:text-4xl text-white font-PTGilroy-light bg-green-4000'>
           Made with <FontAwesomeIcon icon={faHeart} className='px-2 text-2xl sm:text-3xl md:text-4xl' /> by GDG Algiers

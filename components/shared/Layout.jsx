@@ -45,7 +45,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       });
   
     }, {
-      threshold: 0.42,
+      threshold: 0.45,
     })
 
     //observe the sections
@@ -65,7 +65,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       <div className="relative h-full">
         <Navbar />
 
-        <div className="container h-full flex justify-between items-start mt-24">
+        <div className="container h-full flex justify-between items-start mt-4 md:mt-16 xl:mt-12 2xl:mt-24">
 
           <Follow />
 
