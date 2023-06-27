@@ -171,7 +171,7 @@ function Shapes(){
       </div>
 
       {/* Rectangulars */}
-      <div className="absolute top-[14%] left-1/2 z-10">
+      <div className="absolute top-[14%] lg:top-[15%] left-1/2 z-10">
         <Image
           src="/shapes/rectangular.png"
           alt="shape"
