@@ -171,7 +171,7 @@ function Shapes(){
       </div>
 
       {/* Rectangulars */}
-      <div className="absolute top-24 left-1/2 z-10">
+      <div className="absolute top-[14%] left-1/2 z-10">
         <Image
           src="/shapes/rectangular.png"
           alt="shape"
@@ -181,7 +181,7 @@ function Shapes(){
         />
       </div>
       
-      <div id="top-right-rectangle" className="absolute top-1/3 right-80 z-10">
+      <div id="top-right-rectangle" className="absolute top-1/3 right-32 lg:right-80 z-10">
         <Image
           src="/shapes/rectangular.png"
           alt="shape"
@@ -200,7 +200,7 @@ function Shapes(){
           className="rotate-45"
         />
       </div>
-      <div id="bottom-left-rectangle" className="absolute top-2/3 left-48 z-10">
+      <div id="bottom-left-rectangle" className="absolute top-3/4 lg:top-2/3 left-48 z-10">
         <Image
           src="/shapes/rectangular.png"
           alt="shape"
@@ -232,12 +232,12 @@ function Shapes(){
         <Image src="/shapes/triangle.png" alt="shape" height={28} width={28} />
       </motion.div>
 
-      <div id="triangle2" className="absolute bottom-1/3 left-1/4 z-10">
+      <div id="triangle2" className="absolute bottom-1/3 left-10 lg:left-1/4 z-10">
         <Image src="/shapes/triangle.png" alt="shape" height={40} width={37} className="rotate-45 scale-50"/>
       </div>
 
       {/* Squares */}
-      <div id="middle-top-square" className="absolute top-1/3 left-1/3 z-10">
+      <div id="middle-top-square" className="absolute top-[40%] left-1/2 z-10 lg:left-1/3">
         <Image src="/shapes/square.png" alt="shape" height={40} width={40} className="-rotate-90" />
       </div>
 
@@ -251,7 +251,7 @@ function Shapes(){
         <Image src="/shapes/square.png" alt="shape" height={25} width={25} />
       </motion.div>
 
-      <div id="bottom-right-square" className="absolute bottom-12 right-48 z-10">
+      <div id="bottom-right-square" className="absolute right-10 bottom-64 lg:bottom-12 lg:right-48 z-10">
         <Image src="/shapes/square.png" alt="shape" height={25} width={25} />
       </div>
 
@@ -261,7 +261,7 @@ function Shapes(){
         animate={{opacity: [0, 1]}}
         variants={animationRotate}
         transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse', }}
-        className="absolute bottom-1/4 right-96 z-10"
+        className="absolute bottom-[20%] right-[15%] lg:bottom-1/4 lg:right-96 z-10"
       >
         <Image src="/shapes/circle.png" alt="shape" height={15} width={15} />
       </motion.div>

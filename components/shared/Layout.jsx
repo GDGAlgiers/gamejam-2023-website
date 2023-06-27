@@ -60,12 +60,12 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       <Shapes />
 
       {/* Background image */}
-      <div className="fixed   top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
+      <div className="fixed top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
 
       <div className="relative h-full">
         <Navbar />
 
-        <div className="container h-full flex justify-between items-start mt-24">
+        <div className="container h-full flex justify-between items-start mt-0 xl:mt-12 2xl:mt-24">
 
           <Follow />
 
