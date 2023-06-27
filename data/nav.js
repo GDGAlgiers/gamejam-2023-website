@@ -9,12 +9,12 @@ const navItems = [
     target: "/#about",
     isActive: false,
   },
-  // {
-  //     name: "Mentors",
+  {
+    name: "Mentors",
 
-  //    target: "/#"
-  //     isActive: false
-  // },
+    target: "/#",
+    isActive: false,
+  },
   {
     name: "Agenda",
     target: "/#agenda",

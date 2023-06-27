@@ -31,11 +31,11 @@ export default function Home() {
           <About />
         </SectionContainer>
 
-        {/* <SectionContainer sectionIndex={2} ref={sectionsRef} >
-          <Speakers/>
-        </SectionContainer> */}
-
         <SectionContainer sectionIndex={2} ref={sectionsRef}>
+          <Speakers />
+        </SectionContainer>
+
+        <SectionContainer sectionIndex={3} ref={sectionsRef}>
           <Agenda />
         </SectionContainer>
 
@@ -47,7 +47,7 @@ export default function Home() {
           <Sponsors/>
         </SectionContainer> */}
 
-        <SectionContainer sectionIndex={3} ref={sectionsRef}>
+        <SectionContainer sectionIndex={4} ref={sectionsRef}>
           <Faq />
         </SectionContainer>
 
