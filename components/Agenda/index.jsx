@@ -14,7 +14,7 @@ const Agenda = () => {
             "id":0,
             "startTime":"18:00",
             "endTime":"18:30",
-            "text": "Openning ceremoney"
+            "text": "Openning ceremony"
         },
         {    
             "id":1,
