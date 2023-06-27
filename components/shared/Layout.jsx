@@ -45,7 +45,7 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
       });
   
     }, {
-      threshold: 0.42,
+      threshold: 0.45,
     })
 
     //observe the sections

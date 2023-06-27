@@ -10,13 +10,13 @@ const Footer = () => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger the animation once
     // rootMargin: '0px 0px -32% 0px',
-    threshold: 0.42,
+    threshold: 0.3,
   });
 
   const animationVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
+      y: 0,
     },
     visible: {
       opacity: 1,
