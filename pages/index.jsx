@@ -51,7 +51,7 @@ export default function Home() {
           <Faq />
         </SectionContainer>
 
-        <SectionContainer sectionIndex={4} ref={sectionsRef}>
+        <SectionContainer sectionIndex={5} ref={sectionsRef}>
           <Contact />
           <Footer />
         </SectionContainer>

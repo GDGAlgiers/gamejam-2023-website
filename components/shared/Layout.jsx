@@ -4,59 +4,55 @@ import SideNav from "./SideNav";
 import Shapes from "./Shapes";
 import { useEffect, useRef, useState } from "react";
 const Layout = ({ mainRef, sectionsRef, children }) => {
-
-  const [navItems, setNavItems ] = useState(require('@/data/nav').default);
+  const [navItems, setNavItems] = useState(require("@/data/nav").default);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
   const observerRef = useRef(null);
 
   const disconnectObserver = () => {
-    if(observerRef.current) observerRef.current.disconnect(); else return;
-  }
+    if (observerRef.current) observerRef.current.disconnect();
+    else return;
+  };
 
   const observeSections = () => {
     sectionsRef.current.forEach((section) => {
       observerRef.current.observe(section);
     });
-  }
+  };
 
   useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const targetIndex = sectionsRef.current.indexOf(entry.target);
 
-    observerRef.current = new IntersectionObserver( (entries) => {
-      
-      entries.forEach((entry) => {
-  
-        if(entry.isIntersecting){
+            if (targetIndex < 0) return;
+            if (targetIndex === currentSectionIndex) return;
 
-          
-          const targetIndex = sectionsRef.current.indexOf(entry.target);
-          
-          if(targetIndex < 0) return;
-          if(targetIndex === currentSectionIndex) return;
+            setCurrentSectionIndex(targetIndex);
 
-          setCurrentSectionIndex(targetIndex);
-
-          return setNavItems(prev => {
-            return prev.map( (item, index) => {
-              return {...item, isActive: index === targetIndex}
-            })
-          })
-        }
-      });
-  
-    }, {
-      threshold: 0.45,
-    })
+            return setNavItems((prev) => {
+              return prev.map((item, index) => {
+                return { ...item, isActive: index === targetIndex };
+              });
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.45,
+      }
+    );
 
     //observe the sections
     observeSections();
 
     return () => observerRef.current.disconnect();
-
-  }, [sectionsRef, navItems, currentSectionIndex])
+  }, [sectionsRef, navItems, currentSectionIndex]);
 
   return (
-    <div className="relative h-screen pt-6 overflow-hidden">
+    <div className="relative h-screen md:pt-6 pt-24 overflow-hidden">
       <Shapes />
 
       {/* Background image */}
@@ -66,7 +62,6 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
         <Navbar />
 
         <div className="container h-full flex justify-between items-start mt-4 md:mt-16 xl:mt-12 2xl:mt-24">
-
           <Follow />
 
           <main
@@ -78,10 +73,14 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
             {children}
           </main>
 
-          <SideNav sectionsRef={sectionsRef} navItems={navItems} observeSections={observeSections} setCurrentSectionIndex={setCurrentSectionIndex} disconnectObserver={disconnectObserver}/>
-
+          <SideNav
+            sectionsRef={sectionsRef}
+            navItems={navItems}
+            observeSections={observeSections}
+            setCurrentSectionIndex={setCurrentSectionIndex}
+            disconnectObserver={disconnectObserver}
+          />
         </div>
-
       </div>
     </div>
   );
