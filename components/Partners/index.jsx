@@ -33,11 +33,12 @@ const animationVariantsTitle = {
   return (
     <section>
               <motion.div
-               ref={ref}
-               initial="hidden"
-               animate={inView ? 'visible' : 'hidden'}
-               variants={animationVariantsTitle}
-               transition={{ duration: 0.8}}
+                id='partners'
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={animationVariantsTitle}
+                transition={{ duration: 0.8}}
               >
                   <SectionTitle class="my-8" title="Partners" />    
               </motion.div>
@@ -49,7 +50,7 @@ const animationVariantsTitle = {
                variants={animationVariants}
                transition={{ duration: 0.8}}
               >
-                  <div id='partners' className="flex flex-col items-center gap-10  justify-center my-10 lg:my-20">
+                  <div className="flex flex-col items-center gap-10  justify-center my-10 lg:my-20">
 
                     <div className="relative mb-2 lg:mb-0">
                       <Image src={Ellipse} alt="EllipseColorMissed" 

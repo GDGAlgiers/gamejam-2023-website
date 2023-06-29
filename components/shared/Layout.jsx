@@ -54,11 +54,11 @@ const Layout = ({ mainRef, sectionsRef, children }) => {
   return (
     <div className="relative h-screen md:pt-6 pt-24 overflow-hidden">
       <Shapes />
-
+    
       {/* Background image */}
       <div className="fixed top-0 left-0 bottom-0 right-0 -z-1 bg-[url('/images/bg.png')] bg-cover bg-no-repeat bg-center"></div>
 
-      <div className="relative h-full">
+      <div className="relative z-20 h-full">
         <Navbar />
 
         <div className="container h-full flex justify-between items-start mt-4 md:mt-16 xl:mt-12 2xl:mt-24">

@@ -36,7 +36,7 @@ const Speaker = (props) => {
 
 
 
-          <div className={`bottom-1  flex flex-col items-center relative  justify-evenly ${hovered ? 'h-[94%]' : 'w-[35%]'}`}>
+          <div className={`bottom-1  flex flex-col items-center relative  justify-evenly ${hovered ? 'h-[94%] w-full' : 'w-[35%]'}`}>
 
             <div className={` ${hovered ? 'w-[34%]' : 'w-[100%]'}  relative flex justify-center items-center transition-transform duration-1000 ease-in-out`}>
         
@@ -56,11 +56,11 @@ const Speaker = (props) => {
 
             </div>
 
-            <h2 className={`relative bottom-5 text-[14px] top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl      border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
+            <h2 className={`relative bottom-5 text-[14px] top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
 
-            <div className={`bottom-2   flex justify-center items-center relative z-40`}>
+            <div className={`bottom-2 flex justify-center items-center relative z-40`}>
 
-              <h2 className={`text-xl [text-shadow:_0_0px_8px_#4EFEF6] sm:text-2xl md:text-3xl 2xl:text-[42px]    z-30 font-PTChaser absolute text-[#56DBF5]  ${hovered ? 'hidden transition-all duration-500' : null}`}>Mentor</h2>
+              <h2 className={`text-xl [text-shadow:_0_0px_8px_#4EFEF6] sm:text-2xl md:text-3xl 2xl:text-[42px] z-30 font-PTChaser absolute text-[#56DBF5]  ${hovered ? 'hidden transition-all duration-500' : null}`}>Mentor</h2>
               
               <Image
               src="/shapes/mentor_title.png"
@@ -72,7 +72,7 @@ const Speaker = (props) => {
 
             </div>
         
-            <p className={hovered ? 'text-xs  w-[90%] bottom-6 sm:text-sm sm:bottom-4 md:text-lg lg:text-[16px] lg:bottom-6 2xl:text-2xl  transition-all duration-1000 text-white   text-center relative' : 'hidden'} >{props.description}</p>
+            <p className={hovered ? 'text-xs  w-[90%] bottom-6 sm:text-sm sm:bottom-4 md:text-lg lg:text-[16px] lg:bottom-6 2xl:text-2xl  transition-all duration-1000 text-white text-center relative' : 'hidden'} >{props.description}</p>
           
           </div>
         

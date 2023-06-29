@@ -1,7 +1,7 @@
 const navItems = [
   {
     name: "Start",
-    target: "/#",
+    target: "/#start",
     isActive: true,
   },
   {
@@ -11,8 +11,7 @@ const navItems = [
   },
   {
     name: "Mentors",
-
-    target: "/#",
+    target: "/#mentors",
     isActive: false,
   },
   {
