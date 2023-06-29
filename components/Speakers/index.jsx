@@ -51,6 +51,37 @@ const Speakers = () => {
       image:
         "https://res.cloudinary.com/dz4gvcjfy/image/upload/v1687879923/IMG_20230627_121709_-_Anis_Rouane_vh7szn.jpg",
     },
+    {
+      id: 5,
+      name: "Ramdani Youcef Fethi",
+      description:
+        "3D Artist, GameDev, Concept Artist. Inspired by the DnD universe and Dystopian Galactic fantasies.",
+      image:
+        "https://res.cloudinary.com/dz4gvcjfy/image/upload/v1688046497/FB_IMG_1687882483630_-_Youcef_Ramdani_hzukjp.jpg",
+    },
+    {
+      id: 6,
+      name: "Hamitouche Mohamed Amine",
+      description:
+        "Student in thermo energetic game designer and game writer and a big fan of RPG games",
+      image:
+        "https://res.cloudinary.com/dz4gvcjfy/image/upload/v1688046496/FB_IMG_1687105914273_-_Mohamed_Amine_Hamitouche_oerxxg.jpg",
+    },
+    {
+      id: 7,
+      name: "Kadouche Marwan",
+      description: "3D Artist at Ronintek",
+      image:
+        "https://res.cloudinary.com/dz4gvcjfy/image/upload/v1688046496/1654337908805_1_-_marwan_kadouche_pcfcbz.jpg",
+    },
+    {
+      id: 8,
+      name: "Lakehal Ahmed Amine",
+      description:
+        "Information Systems Engineer, Game Development instructor at BrainerX, Managing Partner at BCCM",
+      image:
+        "https://res.cloudinary.com/dz4gvcjfy/image/upload/v1688046775/Profile_Picture_-_Ahmedamine_LAKEHAL_yrmxwa.jpg",
+    },
   ];
 
   const [ref, inView] = useInView({
