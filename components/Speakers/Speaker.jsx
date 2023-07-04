@@ -56,7 +56,7 @@ const Speaker = (props) => {
 
             </div>
 
-            <h2 className={`relative bottom-5 text-[14px] top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
+            <h2 className={`relative text-center pb-1 bottom-5 text-[14px] top-0 sm:text-2xl sm:bottom-20 sm:-top-3 md:text-3xl 2xl:text-5xl border-solid border-gradient border-y-violet-600 BORDER6 ${hovered ? 'text-white font-PTChaser' : 'hidden'}`}>{props.name}</h2>
 
             <div className={`bottom-2 flex justify-center items-center relative z-40`}>
 
